@@ -1,41 +1,31 @@
+import AboutLead from "@/components/sections/AboutLead";
 import { Metadata } from "next";
 
-const siteUrl = "https://www.synageconsultants.com";
-
 /*
-  🔹 Update these later when full site launches
+  🔹 Change these anytime
 */
 const pageTitle =
-  "Synage Consultants | Luxury Real Estate Advisory in Delhi NCR";
+  "Luxury Real Estate Advisory in Gurgaon & South Delhi | Synage Consultants";
 
 const pageDescription =
-  "Synage Consultants is enhancing its digital presence. We continue to offer bespoke residential and commercial real estate advisory services across Gurgaon and South Delhi.";
+  "Synage Consultants offers premium residential and commercial real estate advisory services across Gurgaon and South Delhi. Trusted expertise. Proven results.";
 
 /*
-  ✅ SEO Metadata (Keep index TRUE while live)
+  🔥 SEO Metadata for Homepage
 */
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-
-  title: pageTitle, // 🔁 Update when full homepage launches
-  description: pageDescription, // 🔁 Update later
+  title: pageTitle, // 🔁 Change title anytime
+  description: pageDescription, // 🔁 Change description anytime
 
   alternates: {
-    canonical: "/", // 🔁 Keep root canonical
-  },
-
-  robots: {
-    index: true, // ✅ Keep TRUE (do NOT disable indexing)
-    follow: true,
+    canonical: "/", // 🔁 Change if route changes
   },
 
   openGraph: {
-    type: "website",
-    url: siteUrl,
     title: pageTitle,
     description: pageDescription,
-    siteName: "Synage Consultants",
-    locale: "en_IN",
+    url: "/", // 🔁 Change if domain/route changes
+    type: "website",
   },
 
   twitter: {
@@ -45,12 +35,16 @@ export const metadata: Metadata = {
   },
 };
 
-export default function InProgressDarkPage() {
+/*
+  🔥 Homepage Component
+*/
+export default function HomePage() {
   return (
     <>
       {/* 
-        🔥 Structured Data – Keeps Brand Authority Strong
-        🔁 Update address/brand details if needed
+        🔥 Local Business Structured Data
+        Helps with Gurgaon / Delhi NCR ranking
+        🔁 Update if business details change
       */}
       <script
         type="application/ld+json"
@@ -58,16 +52,26 @@ export default function InProgressDarkPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
-            name: "Synage Consultants",
-            url: siteUrl,
-            description: pageDescription,
+
+            name: "Synage Consultants", // 🔁 Change if brand changes
+            url: "https://www.synageconsultants.com", // 🔁 Change if domain changes
+
             areaServed: [
-              { "@type": "City", name: "Gurgaon" },
-              { "@type": "City", name: "South Delhi" },
+              {
+                "@type": "City",
+                name: "Gurgaon", // 🔁 Add more cities if needed
+              },
+              {
+                "@type": "City",
+                name: "South Delhi",
+              },
             ],
+
+            description: pageDescription, // 🔁 Keep synced with meta description
+
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Gurgaon",
+              addressLocality: "Gurgaon", // 🔁 Update if office location changes
               addressRegion: "Haryana",
               addressCountry: "IN",
             },
@@ -75,51 +79,16 @@ export default function InProgressDarkPage() {
         }}
       />
 
-      <main className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-950 to-gray-900 px-6">
-        <div className="relative max-w-2xl w-full text-center bg-gray-900/80 backdrop-blur-xl border border-gray-800 rounded-3xl shadow-2xl p-12">
-
-          {/* Subtle Glow */}
-          <div className="absolute inset-0 rounded-3xl border border-blue-900/30 pointer-events-none" />
-
-          {/* Brand Name */}
-          <img src="./Logo_Synage.png" alt="" />
-
-          <div className="w-24 h-[2px] bg-gradient-to-r from-transparent via-blue-500 to-transparent mx-auto my-8" />
-
-          {/* Main Message */}
-          <h2 className="text-xl md:text-2xl font-semibold text-gray-200">
-            Elevating Our Digital Experience
-          </h2>
-
-          <p className="mt-6 text-gray-400 leading-relaxed text-base md:text-lg">
-            We are currently refining our online presence to better reflect
-            our bespoke real estate advisory services across Gurgaon and
-            South Delhi. Our commitment to excellence continues uninterrupted.
-          </p>
-
-          {/* Elegant Animated Dots */}
-          <div className="flex justify-center mt-10">
-            <div className="flex space-x-3">
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse" />
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse delay-150" />
-              <span className="w-3 h-3 bg-blue-500 rounded-full animate-pulse delay-300" />
-            </div>
-          </div>
-
-          {/* Contact */}
-          <div className="mt-12 text-sm text-gray-400">
-            <p className="text-gray-500">For immediate inquiries:</p>
-            <p className="mt-3 text-gray-200 font-medium">
-              +91 98111 76892
-            </p>
-            <p>info@synageconsultants.com</p>
-          </div>
-
-          {/* Footer */}
-          <p className="mt-10 text-xs text-gray-600">
-            © {new Date().getFullYear()} Synage Consultants. All Rights Reserved.
-          </p>
-        </div>
+      {/* 
+        🏠 Landing Page UI Goes Here
+        🔁 Replace with Hero, Services, CTA, etc.
+      */}
+      <main>
+        {/* Homepage sections */}
+        {/* Home */}
+        {/* <p className="font-heading"> Stylish Mother </p> */}
+        {/* <p className="font-body"  > Spline Sans </p> */}
+        <AboutLead/>
       </main>
     </>
   );

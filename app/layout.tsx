@@ -85,6 +85,7 @@ export default function RootLayout({
     <html lang="en-IN" className={`${splineSans.variable} ${stylishMother.variable}`}>
       <head>
         {/* Structured Data - RealEstateAgent Schema */}
+        <meta name="apple-mobile-web-app-title" content="Synage Consultants" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

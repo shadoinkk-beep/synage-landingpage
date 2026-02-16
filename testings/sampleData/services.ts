@@ -20,7 +20,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 1,
         servicename: "Luxury Transaction Advisory",
-        image: "/images/service1.jpg",
+        image: "/images/service1.svg",
         tags: ["Gurgaon", "South Delhi", "#100Cr+"],
         description:
           "Buy-side and sell-side execution for condos, villas, and farmhouses."
@@ -28,7 +28,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 2,
         servicename: "Primary Sales Execution",
-        image: "/images/service2.jpg",
+        image: "/images/service1.svg",
         tags: ["Developer Ties", "Launch Access", "Premium Projects"],
         description:
           "Direct developer coordination and early access to new launches."
@@ -36,7 +36,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 3,
         servicename: "High-Value Asset Deals",
-        image: "/images/service3.jpg",
+        image: "/images/service1.svg",
         tags: ["HNIs", "Discreet", "Off-Market"],
         description:
           "Confidential advisory for ultra-luxury and off-market transactions."
@@ -49,7 +49,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 4,
         servicename: "Residential Leasing",
-        image: "/images/service4.jpg",
+        image: "/images/service1.svg",
         tags: ["Tenant Screening", "Corporate Clients", "Fast Closure"],
         description:
           "End-to-end leasing support with verified tenants."
@@ -57,7 +57,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 5,
         servicename: "Commercial Leasing",
-        image: "/images/service5.jpg",
+        image: "/images/service1.svg",
         tags: ["Office Spaces", "Retail", "Negotiation"],
         description:
           "Strategic leasing for office and retail properties."
@@ -65,7 +65,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 6,
         servicename: "Lease Management",
-        image: "/images/service6.jpg",
+        image: "/images/service1.svg",
         tags: ["Renewals", "Documentation", "Compliance"],
         description:
           "Ongoing lease tracking, renewals, and contract management."
@@ -78,7 +78,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 7,
         servicename: "Investment Structuring",
-        image: "/images/service7.jpg",
+        image: "/images/service1.svg",
         tags: ["Diversification", "Risk Planning", "Yield Focus"],
         description:
           "Portfolio planning and allocation for long-term growth."
@@ -86,7 +86,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 8,
         servicename: "Asset Rebalancing",
-        image: "/images/service8.jpg",
+        image: "/images/service1.svg",
         tags: ["Performance Review", "Exit Strategy", "Capital Gain"],
         description:
           "Optimizing portfolio based on market movement."
@@ -94,7 +94,7 @@ export const servicesData: ServiceTypeGroup[] = [
       {
         id: 9,
         servicename: "NRI Portfolio Advisory",
-        image: "/images/service9.jpg",
+        image: "/images/service1.svg",
         tags: ["Remote Handling", "Legal Support", "Full Representation"],
         description:
           "Complete portfolio handling for overseas investors."

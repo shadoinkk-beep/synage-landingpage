@@ -1,4 +1,12 @@
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
 import AboutLead from "@/components/sections/AboutLead";
+import BlogsHero from "@/components/sections/BlogsHero";
+import ContactUs from "@/components/sections/ContactUs";
+import HomeHero from "@/components/sections/HomeHero";
+import Services from "@/components/sections/Services";
+import TrustedFor from "@/components/sections/TrustedFor";
+import WhyUs from "@/components/sections/WhyUs";
 import { Metadata } from "next";
 
 /*
@@ -88,7 +96,15 @@ export default function HomePage() {
         {/* Home */}
         {/* <p className="font-heading"> Stylish Mother </p> */}
         {/* <p className="font-body"  > Spline Sans </p> */}
+        <Navbar/>
+        <HomeHero/>
+        <WhyUs/>
+        <Services/>
         <AboutLead/>
+        <TrustedFor/>
+        <BlogsHero/>
+        <ContactUs/>
+        <Footer/>
       </main>
     </>
   );

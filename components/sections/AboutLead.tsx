@@ -4,7 +4,7 @@ import ArrowSlideButton from "../common/ArrowSlideButton";
 export default function AboutLead() {
   return (
 
-    <section className="section section-light" >
+    <section id="about" className="section section-light" >
       <div className="section-content">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
 
@@ -35,7 +35,7 @@ export default function AboutLead() {
             {/* CTA BUTTON */}
             <ArrowSlideButton
   text="Book A Consultation"
-  link="/contact"
+  link="/about" 
 />
 
           </div>

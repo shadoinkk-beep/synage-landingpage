@@ -1,12 +1,18 @@
+import ClientTrust from "@/components/about/ClientTrust";
+import ExpertExecution from "@/components/about/ExpertExecution";
+import Founders from "@/components/about/Founders";
+import Footer from "@/components/common/Footer";
+import Navbar from "@/components/common/Navbar";
+import TrustedFor from "@/components/sections/TrustedFor";
 import { Metadata } from "next";
 
 /*
   🔹 Change these anytime
 */
-const pageTitle =
+const pageTitle = 
   "About Synage Consultants | Real Estate Experts in Gurgaon";
 
-const pageDescription =
+const pageDescription = 
   "Learn about Synage Consultants, a trusted real estate advisory firm serving Gurgaon and South Delhi with premium residential and commercial expertise.";
 
 /*
@@ -66,7 +72,12 @@ export default function AboutPage() {
         🔁 Replace with team info, mission, values, etc.
       */}
       <div>
-       About
+       <Navbar/>
+       <ClientTrust/>
+       <Founders/>
+       <TrustedFor/>
+       <ExpertExecution/>
+       <Footer/>
       </div>
     </>
   );

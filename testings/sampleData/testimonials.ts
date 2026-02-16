@@ -34,7 +34,7 @@ export const testimonialsData: Testimonial[] = [
     message:
       "Outstanding advisory and execution. Highly recommend their premium services.",
     avatar: "/images/avatar2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=example1",
+    videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb1.jpg"
   },
   {
@@ -56,7 +56,7 @@ export const testimonialsData: Testimonial[] = [
     message:
       "Transparent, reliable, and result-oriented team.",
     avatar: "/images/avatar4.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=example2",
+    videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb2.jpg"
   },
   {
@@ -78,7 +78,7 @@ export const testimonialsData: Testimonial[] = [
     message:
       "A premium experience from start to finish.",
     avatar: "/images/avatar2.jpg",
-    videoUrl: "https://www.youtube.com/watch?v=example3",
+    videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb3.jpg"
   }
 ];

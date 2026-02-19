@@ -89,7 +89,7 @@ export default function Navbar() {
               className="relative md:absolute md:left-1/2 md:-translate-x-1/2"
             >
               <Image
-                src="/logo_Synage.png"
+                src="/Logo_Synage.png"
                 alt="Synage Consultants"
                 width={130}
                 height={36}

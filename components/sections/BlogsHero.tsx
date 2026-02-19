@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { blogsData } from "@/testings/sampleData/blogs";
 import ArrowSlideButton from "@/components/common/ArrowSlideButton";
-
+import Arrow from "../common/Arrow";
 export default function BlogsHero() {
   const total = blogsData.length;
   const [index, setIndex] = useState(0);
@@ -31,7 +31,7 @@ export default function BlogsHero() {
             Insights for luxury real estate decisions
           </h2>
 
-          <div className="space-y-4 max-w-md ml-auto">
+          <div className="space-y-4 max-w-md ml-auto text-right">
             <p className="font-body text-sm md:text-base text-black/70">
               We publish practical notes on resales, pre-rented assets, leasing,
               and NRI ownership across Gurgaon and South Delhi.
@@ -42,13 +42,13 @@ export default function BlogsHero() {
         </div>
 
         {/* ================= MAIN ROW (REFERENCE LINE) ================= */}
-        <div className="mt-16 grid grid-cols-[20%_1fr] gap-10 items-stretch">
+        <div className="mt-16 grid grid-cols-[20%_1fr] gap-36 items-stretch">
 
           {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-between h-[420px]">
+          <div className="flex flex-col justify-between h-105">
 
             {/* COUNTER — aligned to card top */}
-            <div className="flex items-baseline gap-2 translate-y-[1px]">
+            <div className="flex items-baseline gap-2 translate-y-px">
               <span className="text-6xl font-semibold leading-none">
                 {String(index + 1).padStart(2, "0")}
               </span>
@@ -61,15 +61,17 @@ export default function BlogsHero() {
             <div className="flex gap-6">
               <button
                 onClick={prev}
-                className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
+                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
               >
-                ←
+                 <Arrow className="rotate-180" />
               </button>
               <button
                 onClick={next}
-                className="w-16 h-16 rounded-full border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
+                className="w-20 h-20 p-4 rounded-full cursor-pointer border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
               >
-                →
+                {/* <img src="/images/Arrow.svg" alt="" />
+                 */}
+                 <Arrow />
               </button>
             </div>
 
@@ -91,7 +93,7 @@ export default function BlogsHero() {
 
 function BlogCard({ blog }: { blog: any }) {
   return (
-    <div className="relative rounded-3xl overflow-hidden bg-black h-[420px] flex flex-col justify-end">
+    <div className="relative rounded-3xl overflow-hidden bg-black h-105 flex flex-col justify-end">
       <Image src={blog.img} alt={blog.title} fill className="object-cover" />
       <div className="absolute inset-0 bg-black/50" />
 

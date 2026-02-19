@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Spline_Sans } from "next/font/google";
 import localFont from "next/font/local";
+import Navbar from "@/components/common/Navbar";
+// import Navbar from "@/components/common/Navbar";
 
 const splineSans = Spline_Sans({
   subsets: ["latin"],
@@ -117,7 +119,13 @@ export default function RootLayout({
         />
       </head>
 
-      <body>{children}</body>
+      <body>
+        
+       <Navbar/>
+      
+      {children}
+        
+        </body>
     </html>
   );
 }

@@ -23,7 +23,7 @@ export const testimonialsData: Testimonial[] = [
     company: "Shadolk",
     message:
       "It was great working with everyone. Their professionalism and attention to detail made the entire experience seamless.",
-    avatar: "/images/avatar1.jpg"
+    avatar: "/images/sampleclient.png"
   },
   {
     id: 2,
@@ -33,7 +33,7 @@ export const testimonialsData: Testimonial[] = [
     company: "Dubai International",
     message:
       "Outstanding advisory and execution. Highly recommend their premium services.",
-    avatar: "/images/avatar2.jpg",
+    avatar: "/images/sampleclient.png",
     videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb1.jpg"
   },
@@ -45,7 +45,7 @@ export const testimonialsData: Testimonial[] = [
     company: "UrbanEdge Realty",
     message:
       "Smooth transaction process with clear communication at every stage.",
-    avatar: "/images/avatar3.jpg"
+    avatar: "/images/sampleclient.png"
   },
   {
     id: 4,
@@ -55,7 +55,7 @@ export const testimonialsData: Testimonial[] = [
     company: "Global Assets Ltd.",
     message:
       "Transparent, reliable, and result-oriented team.",
-    avatar: "/images/avatar4.jpg",
+    avatar: "/images/sampleclient.png",
     videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb2.jpg"
   },
@@ -67,7 +67,7 @@ export const testimonialsData: Testimonial[] = [
     company: "Shadolk",
     message:
       "Exceptional market knowledge and structured advisory approach.",
-    avatar: "/images/avatar1.jpg"
+    avatar: "/images/sampleclient.png"
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ export const testimonialsData: Testimonial[] = [
     company: "Dubai International",
     message:
       "A premium experience from start to finish.",
-    avatar: "/images/avatar2.jpg",
+    avatar: "/images/sampleclient.png",
     videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb3.jpg"
   }

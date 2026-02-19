@@ -2,36 +2,27 @@
 
 import Image from "next/image";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
+import Textfit from "react-textfit";
 
 export default function Founders() {
   return (
-    <section className="section section-light">
-      <div className="section-content space-y-28">
+    <section className="section section-light z-1!">
+      <div className="section-content">
 
         {/* ================= FOUNDERS HERO ================= */}
-        <div className="relative">
-
           {/* OVERLAPPING HEADING */}
-          <h2
-            className="
-              font-heading
-              text-6xl md:text-8xl
-              leading-none
-              absolute
-              top-0
-              left-0
-              z-20
-            "
-          >
-            FOUNDERS
-          </h2>
+                 <Textfit mode="single" className="font-heading z-10 relative" max={1000} style={{ width: "100%" }}>
+                   FOUNDERS
+                 </Textfit>
+        <div className="relative z-5 -mt-42 mb-12">
+
 
           {/* HERO BLOCK */}
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center pt-24">
+          <div className="grid grid-cols-1 md:grid-cols-10 gap-12 items-center pl-24">
 
             {/* IMAGE (≈80%) */}
-            <div className="md:col-span-10">
-              <div className="relative w-full h-[520px] rounded-2xl overflow-hidden">
+            <div className="md:col-span-8">
+              <div className="relative w-full h-130 overflow-hidden ">
                 <Image
                   src="/AboutPage/FoundersPage.svg"
                   alt="Synage Founders"
@@ -43,31 +34,34 @@ export default function Founders() {
             </div>
 
             {/* TEXT (≈20%) */}
-            <div className="md:col-span-2 space-y-6 text-sm leading-relaxed text-right flex flex-col justify-center text-black max-w-xs ml-auto">
-              <p>
+            <div className="md:col-span-2 space-y-6 text-sm leading-relaxed text-right flex flex-col justify-center text-black max-w-xs ml-auto self-end">
+              {/* <p> */}
                 Synage Consultants wasn’t built overnight. It exists today
                 because the founders stayed relentless about doing the work
                 properly—even when nobody was watching.
-              </p>
-              <p>
+              {/* </p> */}
+              {/* <p> */}
                 Dedication shows up in the details. Discipline, calm execution,
                 structured processes, and clarity are what clients trust for
                 high-value decisions.
-              </p>
-              <p>
+              {/* </p> */}
+              {/* <p> */}
                 The founders turned hard work into Synage’s standard of clarity,
                 confidentiality, and control.
-              </p>
+              {/* </p> */}
             </div>
 
           </div>
         </div>
 
+        <div className="grid gap-12">
+          
+        
         {/* ================= FOUNDER 1 ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-12 rounded-2xl overflow-hidden bg-[#02131B] text-[#FBF7F0] min-h-[520px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 rounded-2xl overflow-hidden bg-[#02131B] text-[#FBF7F0] min-h-130">
 
           {/* IMAGE (50%) */}
-          <div className="md:col-span-6 relative h-[520px] rounded-2xl overflow-hidden">
+          <div className="md:col-span-6 relative h-130 rounded-2xl overflow-hidden">
             <Image
               src="/AboutPage/Kunal_Milwani.svg"
               alt="Kunal Milwani"
@@ -110,7 +104,7 @@ export default function Founders() {
         </div>
 
         {/* ================= FOUNDER 2 ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-12 rounded-2xl overflow-hidden bg-[#02131B] text-[#FBF7F0] min-h-[520px]">
+        <div className="grid grid-cols-1 md:grid-cols-12 rounded-2xl overflow-hidden bg-[#02131B] text-[#FBF7F0] min-h-130">
 
           {/* CONTENT (50%) */}
           <div className="md:col-span-6 p-12 flex flex-col justify-center space-y-4">
@@ -144,7 +138,7 @@ export default function Founders() {
           </div>
 
           {/* IMAGE (50%) */}
-          <div className="md:col-span-6 relative h-[520px] rounded-2xl overflow-hidden">
+          <div className="md:col-span-6 relative h-130 rounded-2xl overflow-hidden">
             <Image
               src="/AboutPage/Ujjwal_Sethi.svg"
               alt="Ujjwal Sethi"
@@ -153,7 +147,7 @@ export default function Founders() {
             />
           </div>
         </div>
-
+        </div>
       </div>
     </section>
   );

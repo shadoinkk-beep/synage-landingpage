@@ -96,7 +96,6 @@ export default function HomePage() {
         {/* Home */}
         {/* <p className="font-heading"> Stylish Mother </p> */}
         {/* <p className="font-body"  > Spline Sans </p> */}
-        <Navbar/>
         <HomeHero/>
         <WhyUs/>
         <Services/>

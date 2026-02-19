@@ -4,11 +4,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+/* ================= NAV LINKS ================= */
+// Use either id OR href
 const navLinks = [
-  { label: "Services", id: "services" },
-  { label: "Testimonials", id: "testimonials" },
-  { label: "Blogs", id: "blogs" },
-  { label: "About Us", id: "about" },
+  { label: "Services", id: "services", href: null },
+  { label: "Testimonials", id: "testimonials", href: null },
+  { label: "Blogs", id: "blogs", href: null },
+  { label: "About Us", id: null, href: "/about" },
 ];
 
 export default function Navbar() {
@@ -18,7 +20,8 @@ export default function Navbar() {
   /* ================= ACTIVE SECTION DETECTION ================= */
   useEffect(() => {
     const sections = navLinks
-      .map((item) => document.getElementById(item.id))
+      .filter((item) => item.id)
+      .map((item) => document.getElementById(item.id!))
       .filter(Boolean) as HTMLElement[];
 
     const observer = new IntersectionObserver(
@@ -44,14 +47,15 @@ export default function Navbar() {
     const el = document.getElementById(id);
     if (!el) return;
 
-    const navbarHeight = 56; // h-14
-    const y =
+    const navbarHeight = 56;
+
+    const yOffset =
       el.getBoundingClientRect().top +
-      window.pageYOffset -
+      window.scrollY -
       navbarHeight;
 
     window.scrollTo({
-      top: y,
+      top: yOffset,
       behavior: "smooth",
     });
 
@@ -75,8 +79,8 @@ export default function Navbar() {
   return (
     <>
       {/* NAVBAR */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-transparent">
-        <div className="w-full px-6">
+      <header className="fixed top-0 left-0 w-full z-50 bg-transparent backdrop-blur-2xl">
+        <div className="section-content py-0! px-6">
           <div className="relative flex items-center justify-between h-14">
 
             {/* LOGO */}
@@ -96,17 +100,34 @@ export default function Navbar() {
             {/* DESKTOP NAV */}
             <nav className="hidden md:flex items-center gap-10 text-white">
               {navLinks.map((item) => {
-                const isActive = activeSection === item.id;
+                const isActive = item.id && activeSection === item.id;
 
-                return (
-                  <button
-                    key={item.id}
-                    onClick={() => handleScroll(item.id)}
+                return item.href ? (
+                  /* ================= URL LINK ================= */
+                  <Link
+                    key={item.label}
+                    href={item.href}
                     className="group relative text-sm transition-opacity hover:opacity-80"
                   >
                     {item.label}
 
-                    {/* UNDERLINE (HOVER + ACTIVE) */}
+                    <span
+                      className="
+                        absolute left-0 -bottom-1 h-[2px] w-full bg-white
+                        transform origin-left scale-x-0 group-hover:scale-x-100
+                        transition-transform duration-300
+                      "
+                    />
+                  </Link>
+                ) : (
+                  /* ================= SECTION SCROLL ================= */
+                  <button
+                    key={item.label}
+                    onClick={() => handleScroll(item.id!)}
+                    className="group relative text-sm transition-opacity hover:opacity-80"
+                  >
+                    {item.label}
+
                     <span
                       className={`
                         absolute left-0 -bottom-1 h-[2px] w-full bg-white
@@ -134,7 +155,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* MOBILE HAMBURGER */}
+            {/* MOBILE TOGGLE */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className="md:hidden w-8 h-8 flex flex-col justify-center items-center gap-1 z-50"
@@ -161,24 +182,38 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE OVERLAY */}
+      {/* MOBILE MENU OVERLAY */}
       <div
         className={`fixed inset-0 z-40 bg-black text-white transition-transform duration-700 ${
           menuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
         <div className="h-full flex flex-col justify-center items-start px-6 gap-8 text-2xl">
-          {navLinks.map((item) => (
-            <button
-              key={item.id}
-              onClick={() => handleScroll(item.id)}
-              className={`relative ${
-                activeSection === item.id ? "font-semibold" : ""
-              }`}
-            >
-              {item.label}
-            </button>
-          ))}
+
+          {navLinks.map((item) =>
+            item.href ? (
+              /* URL LINK */
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setMenuOpen(false)}
+                className="text-2xl"
+              >
+                {item.label}
+              </Link>
+            ) : (
+              /* SECTION SCROLL */
+              <button
+                key={item.label}
+                onClick={() => handleScroll(item.id!)}
+                className={`relative ${
+                  activeSection === item.id ? "font-semibold" : ""
+                }`}
+              >
+                {item.label}
+              </button>
+            )
+          )}
 
           <button
             onClick={() => handleScroll("contact")}
@@ -186,6 +221,7 @@ export default function Navbar() {
           >
             Contact Us
           </button>
+
         </div>
       </div>
     </>

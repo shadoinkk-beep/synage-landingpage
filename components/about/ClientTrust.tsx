@@ -2,28 +2,24 @@
 
 import Image from "next/image";
 import ArrowSlideButton from "@/components/common/ArrowSlideButton";
+import { Textfit } from "react-textfit";
+import Marquee from "react-fast-marquee";
+import ArrowDownButton from "../common/ArrowDownButton";
+
 
 export default function ClientTrust() {
   return (
-    <section className="section section-dark relative overflow-hidden max-w-full">
+    <>
+    <section className="section section-dark relative  max-w-full">
 
       {/* ================= CONTENT ================= */}
-      <div className="section-content relative z-10 max-w-full overflow-x-hidden">
+      <div className="section-content relative z-15 max-w-full overflow-x-hidden">
 
         {/* ================= FULL WIDTH HEADING ================= */}
-        <h1
-          className="
-            font-heading
-            text-6xl
-            md:text-8xl
-            leading-tight
-            mb-12
-            break-words
-            max-w-full
-          "
-        >
+        <Textfit mode="single" className="font-heading" max={200} style={{ width: "100%" }}>
           Built On Client&apos;s Trust
-        </h1>
+        </Textfit>
+        
 
         {/* ================= CONTENT GRID ================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-full">
@@ -43,7 +39,7 @@ export default function ClientTrust() {
               possession, leasing, and ongoing management.
             </p>
 
-            <ArrowSlideButton
+            <ArrowDownButton
               text="Book A Consultation"
               link="/contact"
             />
@@ -51,7 +47,7 @@ export default function ClientTrust() {
 
           {/* RIGHT IMAGE */}
           <div className="lg:col-span-6 relative z-10 max-w-full">
-            <div className="relative w-full h-[420px] rounded-2xl overflow-hidden">
+            <div className="relative w-full h-105  overflow-hidden">
               <Image
                 src="/AboutPage/AboutHero.svg"
                 alt="Client Trust"
@@ -66,7 +62,10 @@ export default function ClientTrust() {
       </div>
 
       {/* ================= MARQUEE (HARD-CLIPPED) ================= */}
-      <div className="relative w-full overflow-hidden">
+      {/* <Marquee className="bg-white text-black text-2xl py-6 absolute bottom-0 -mb-6 -rotate-3 z-15" >
+  I can be a React component, multiple React components, or just some text.
+</Marquee> */}
+      {/* <div className="relative w-full overflow-hidden">
 
         <div
           className="bg-[#FBF7F0] py-4 shadow-xl"
@@ -93,8 +92,20 @@ export default function ClientTrust() {
           </div>
         </div>
 
-      </div>
+      </div> */}
+
+          <div className="-rotate-2 z-40 absolute translate-y-[-50%] origin-center shadow-2xl">
+
+          <Marquee className="bg-white text-black text-2xl py-6 " autoFill >
+  <div className="flex gap-6 uppercase font-semibold items-center px-6">
+    Your be spoke real estate family office 
+    <img src="./AboutPage/Star.svg" alt="" />
+  </div>
+</Marquee>
+    </div>
 
     </section>
+
+</>
   );
 }

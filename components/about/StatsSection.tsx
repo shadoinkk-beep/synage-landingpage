@@ -2,9 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import CountUp from "react-countup";
-import ArrowSlideButton from "@/components/common/ArrowSlideButton";
 
-export default function ExpertExecution() {
+export default function StatsSection() {
   const triggerRef = useRef<HTMLDivElement | null>(null);
   const [inView, setInView] = useState(false);
 
@@ -18,8 +17,8 @@ export default function ExpertExecution() {
       },
       {
         root: null,
-        threshold: 0.3,
-        rootMargin: "-80px 0px -40% 0px",
+        threshold: 0.7,
+        rootMargin: "0px 0px 0px 0px",
       }
     );
 
@@ -35,7 +34,7 @@ export default function ExpertExecution() {
   };
 
   return (
-    <section className="section section-dark">
+    <section className="section section-light bg-white!">
       {/* 👇 OBSERVER TARGET */}
       <div ref={triggerRef} />
 
@@ -45,8 +44,8 @@ export default function ExpertExecution() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
           {/* CARD 1 */}
-          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm">
-            <h3 className="text-3xl font-semibold">
+          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
+            <h3 className="text-4xl font-semibold">
               {inView && (
                 <CountUp
                   key={`area-${inView}`}
@@ -59,12 +58,12 @@ export default function ExpertExecution() {
               )}{" "}
               Lakh+
             </h3>
-            <p className="text-sm mt-2">Area Leased Cumulatively</p>
+            <p className="text-lg mt-2 ">Area Leased Cumulatively</p>
           </div>
 
           {/* CARD 2 */}
-          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm">
-            <h3 className="text-3xl font-semibold">
+          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
+            <h3 className="text-4xl font-semibold">
               {inView && (
                 <CountUp
                   key={`value-${inView}`}
@@ -77,12 +76,12 @@ export default function ExpertExecution() {
               )}{" "}
               Cr+
             </h3>
-            <p className="text-sm mt-2">Transaction Value Delivered</p>
+            <p className="text-lg mt-2 ">Transaction Value Delivered</p>
           </div>
 
           {/* CARD 3 */}
-          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm">
-            <h3 className="text-3xl font-semibold">
+          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
+            <h3 className="text-4xl font-semibold">
               {inView && (
                 <CountUp
                   key={`clients-${inView}`}
@@ -94,12 +93,12 @@ export default function ExpertExecution() {
               )}
               +
             </h3>
-            <p className="text-sm mt-2">Clients Served</p>
+            <p className="text-lg mt-2 ">Clients Served</p>
           </div>
 
           {/* CARD 4 */}
-          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm">
-            <h3 className="text-3xl font-semibold">
+          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
+            <h3 className="text-4xl font-semibold">
               {inView && (
                 <CountUp
                   key={`mandates-${inView}`}
@@ -111,31 +110,12 @@ export default function ExpertExecution() {
               )}
               +
             </h3>
-            <p className="text-sm mt-2">Fortune 500 Mandates</p>
+            <p className="text-lg mt-2 ">Fortune 500 Mandates</p>
           </div>
 
         </div>
 
-        {/* ================= CTA ================= */}
-        <div className="text-center max-w-3xl mx-auto space-y-6">
-          <h2 className="font-heading text-4xl md:text-5xl">
-            Get Expert Execution.
-          </h2>
 
-          <p className="text-sm md:text-base opacity-80">
-            If you&apos;re an HNI, NRI, corporate, or expat navigating buying,
-            selling, leasing, or managing luxury property in Gurgaon or South
-            Delhi, speak with Synage. We bring experience, discretion, and
-            end-to-end ownership support to handle it properly.
-          </p>
-
-          <div className="flex justify-center pt-2">
-            <ArrowSlideButton
-              text="Book A Consultation"
-              link="/contact"
-            />
-          </div>
-        </div>
 
       </div>
     </section>

@@ -17,11 +17,13 @@
     "react": "^19.2.3",
     "react-countup": "^6.5.3",
     "react-dom": "^19.2.3",
+    "react-fast-marquee": "^1.6.5",
     "react-fittext": "^1.0.0",
     "react-icons": "^5.5.0",
     "react-intersection-observer": "^10.0.2",
     "react-multi-carousel": "^2.8.6",
     "react-phone-input-2": "^2.15.1",
+    "react-textfit": "^1.1.1",
     "tailwind-merge": "^3.4.0"
   },
   "devDependencies": {

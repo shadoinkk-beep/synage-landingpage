@@ -1,10 +1,11 @@
 import ClientTrust from "@/components/about/ClientTrust";
-import ExpertExecution from "@/components/about/ExpertExecution";
 import Founders from "@/components/about/Founders";
+import { GetExpertExecution } from "@/components/about/GetExpertExecution";
 import Footer from "@/components/common/Footer";
 import Navbar from "@/components/common/Navbar";
 import TrustedFor from "@/components/sections/TrustedFor";
 import { Metadata } from "next";
+import StatsSection from "@/components/about/StatsSection";
 
 /*
   🔹 Change these anytime
@@ -72,11 +73,11 @@ export default function AboutPage() {
         🔁 Replace with team info, mission, values, etc.
       */}
       <div>
-       <Navbar/>
        <ClientTrust/>
        <Founders/>
        <TrustedFor/>
-       <ExpertExecution/>
+       <StatsSection/>
+       <GetExpertExecution/>
        <Footer/>
       </div>
     </>

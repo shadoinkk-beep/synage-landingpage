@@ -19,7 +19,7 @@ export default function AboutLead() {
           <div className="md:col-span-9 space-y-6">
 
             {/* MAIN HEADING */}
-            <h1 className="text-3xl md:text-5xl leading-tight font-medium ">
+            <h1 className="text-3xl md:text-4xl leading-tight font-medium ">
               Built on long-term trust and execution, Synage Consultants supports
               HNIs and NRIs across luxury real estate in Gurgaon and South Delhi
               with discretion, clarity, and Luxury Investment Approach.

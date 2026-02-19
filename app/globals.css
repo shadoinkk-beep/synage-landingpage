@@ -37,6 +37,11 @@
   box-sizing: border-box;
 }
 
+
+a{
+  @apply cursor-pointer;
+}
+
 body {
     overflow-x: hidden;
   min-height: 100vh;
@@ -44,7 +49,7 @@ body {
 }
 
 .section{
-  @apply w-full py-6;
+  @apply w-full py-6 relative z-5;
 }
 
 .section-dark{
@@ -197,4 +202,21 @@ body {
     @apply bg-background text-foreground;
     @apply bg-background text-foreground;
   }
+}
+
+
+.services-carousel-container{
+  @apply pb-8;
+}
+
+.react-multi-carousel-dot  button{
+  @apply bg-white/40 border-0!;
+}
+
+.react-multi-carousel-dot--active button{
+  @apply bg-white!;
+}
+
+span.country-name {
+    color: black;
 }

@@ -42,10 +42,10 @@ export default function BlogsHero() {
         </div>
 
         {/* ================= MAIN ROW (REFERENCE LINE) ================= */}
-        <div className="mt-16 grid grid-cols-[20%_1fr] gap-36 items-stretch">
+        <div className="mt-16 grid sm:grid-cols-[20%_1fr] sm:gap-36 items-stretch">
 
           {/* LEFT COLUMN */}
-          <div className="flex flex-col justify-between h-105">
+          <div className="flex sm:flex-col justify-between h-32 sm:h-105">
 
             {/* COUNTER — aligned to card top */}
             <div className="flex items-baseline gap-2 translate-y-px">

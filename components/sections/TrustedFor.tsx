@@ -111,7 +111,7 @@ export default function TrustedFor() {
             <div className="section-content">
 
                 {/* HEADER */}
-                <div className="flex justify-between pb-12">
+                <div className="grid gap-4 sm:flex justify-between pb-12">
 
                     {/* LEFT: HEADING */}
                     <h2 className="font-heading text-3xl md:text-4xl lg:text-5xl text-white">

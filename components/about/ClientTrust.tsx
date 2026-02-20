@@ -6,6 +6,8 @@ import { Textfit } from "react-textfit";
 import Marquee from "react-fast-marquee";
 import ArrowDownButton from "../common/ArrowDownButton";
 
+import AboutHero from "@/public/AboutPage/AboutHero.jpg";
+
 
 export default function ClientTrust() {
   return (
@@ -49,11 +51,11 @@ export default function ClientTrust() {
           <div className="lg:col-span-6 relative z-10 max-w-full">
             <div className="relative w-full h-105  overflow-hidden">
               <Image
-                src="/AboutPage/AboutHero.svg"
+                src={AboutHero}
                 alt="Client Trust"
                 fill
-                priority
                 className="object-cover"
+                placeholder="blur"
               />
             </div>
           </div>

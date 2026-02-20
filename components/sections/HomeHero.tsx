@@ -40,12 +40,13 @@ export default function HomeHero() {
 
                     {/* Secondary Heading */}
                     {/* <h2 className="mt-4 text-5xl font-heading text-[clamp(2.5rem,5vw,4rem)]"> */}
-                    <h2 className="mt-4  font-heading text-8xl">
+                    <h2 className="mt-4  font-heading text-2x md:text-8xl">
                         In Gurgaon and South Delhi.
                     </h2>
 
                     {/* Description */}
-                    <p className="absolute
+                    <div className="grid gap-4 mt-16">
+                    <p className="sm:absolute grid
     bottom-24
     sm:left-6
     lg:left-8
@@ -61,7 +62,7 @@ export default function HomeHero() {
                     </p>
 
                     {/* CTA */}
-                    <div className="absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col items-end gap-3 pointer-events-auto">
+                    <div className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col sm:items-end gap-3 pointer-events-auto">
 
                         <div className="group">
                             <ArrowDownButton text="Book A Consultation" link="/contact" />
@@ -70,6 +71,7 @@ export default function HomeHero() {
                         <p className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/70">
                             Recommended for better communication
                         </p>
+                    </div>
                     </div>
 
                 </div>

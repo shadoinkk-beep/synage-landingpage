@@ -36,7 +36,7 @@ export default function WhyUs() {
             Why Choose Synage Consultants?
           </h2>
 
-          <p className="font-body text-sm md:text-base opacity-80 max-w-4xl mx-auto">
+          <p className="font-body text-sm md:text-base opacity-80 max-w-3xl mx-auto">
             Luxury real estate decisions require more than listings. Synage
             brings investment execution, discreet representation, and end-to-end
             ownership support across Gurgaon and South Delhi.

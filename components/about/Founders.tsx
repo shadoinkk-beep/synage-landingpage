@@ -4,6 +4,11 @@ import Image from "next/image";
 import { FaLinkedin, FaFacebook, FaInstagram } from "react-icons/fa";
 import Textfit from "react-textfit";
 
+import Kunal_Milwani from "@/public/AboutPage/Kunal_Milwani.jpg";
+import Ujjwal_Sethi from "@/public/AboutPage/Ujjwal_Sethi.jpg";
+import FoundersPage from "@/public/AboutPage/FoundersPage.jpg";
+
+
 export default function Founders() {
   return (
     <section className="section section-light z-1!">
@@ -14,21 +19,21 @@ export default function Founders() {
                  <Textfit mode="single" className="font-heading z-10 relative" max={1000} style={{ width: "100%" }}>
                    FOUNDERS
                  </Textfit>
-        <div className="relative z-5 -mt-42 mb-12">
+        <div className="relative z-5 -mt-12 sm:-mt-42 mb-12">
 
 
           {/* HERO BLOCK */}
-          <div className="grid grid-cols-1 md:grid-cols-10 gap-12 items-center pl-24">
+          <div className="grid grid-cols-1 md:grid-cols-10 gap-12 items-center sm:pl-24">
 
             {/* IMAGE (≈80%) */}
             <div className="md:col-span-8">
               <div className="relative w-full h-130 overflow-hidden ">
                 <Image
-                  src="/AboutPage/FoundersPage.svg"
+                  src={FoundersPage }
                   alt="Synage Founders"
                   fill
                   className="object-cover"
-                  priority
+                  placeholder="blur"
                 />
               </div>
             </div>
@@ -63,10 +68,11 @@ export default function Founders() {
           {/* IMAGE (50%) */}
           <div className="md:col-span-6 relative h-130 rounded-2xl overflow-hidden">
             <Image
-              src="/AboutPage/Kunal_Milwani.svg"
+              src={Kunal_Milwani}
               alt="Kunal Milwani"
               fill
               className="object-cover"
+              placeholder="blur"
             />
           </div>
 
@@ -140,10 +146,11 @@ export default function Founders() {
           {/* IMAGE (50%) */}
           <div className="md:col-span-6 relative h-130 rounded-2xl overflow-hidden">
             <Image
-              src="/AboutPage/Ujjwal_Sethi.svg"
+              src={Ujjwal_Sethi}
               alt="Ujjwal Sethi"
               fill
               className="object-cover"
+              placeholder="blur"
             />
           </div>
         </div>

@@ -31,7 +31,7 @@ export default function BlogsHero() {
             Insights for luxury real estate decisions
           </h2>
 
-          <div className="space-y-4 max-w-md ml-auto text-right">
+          <div className="space-y-4 max-w-md ml-auto text-center sm:text-right">
             <p className="font-body text-sm md:text-base text-black/70">
               We publish practical notes on resales, pre-rented assets, leasing,
               and NRI ownership across Gurgaon and South Delhi.

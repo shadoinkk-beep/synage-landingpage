@@ -10,11 +10,11 @@ import FoundersPage from "@/public/AboutPage/FoundersPage.jpg";
 
 export default function Founders() {
   return (
-    <section className="section section-light relative z-10 ">
+    <section className="section section-light relative z-0!">
       <div className="section-content overflow-visible!">
 
         {/* ================= FOUNDERS HERO ================= */}
-        <div className="sticky top-0">
+        <div className="sticky top-0 h-[80vw]">
 
         <Textfit
           mode="single"
@@ -68,7 +68,7 @@ export default function Founders() {
             <div className="relative h-[250vh]">
 
               {/* ================= FOUNDER 1 ================= */}
-              <div className="sticky top-0 h-screen flex items-center z-10">
+              <div className="sticky top-0 h-screen flex items-center z-15">
                 <div className="grid grid-cols-1 md:grid-cols-12 rounded-2xl overflow-hidden bg-[#02131B] text-[#FBF7F0] w-full max-w-7xl mx-auto shadow-2xl">
 
                   {/* IMAGE */}

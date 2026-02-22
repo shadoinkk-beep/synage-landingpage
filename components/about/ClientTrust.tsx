@@ -12,7 +12,7 @@ import AboutHero from "@/public/AboutPage/AboutHero.jpg";
 export default function ClientTrust() {
   return (
     <>
-    <section className="section section-dark relative  max-w-full">
+    <section id="about" className="section section-dark relative  max-w-full">
 
       {/* ================= CONTENT ================= */}
       <div className="section-content relative z-15 max-w-full overflow-x-hidden">
@@ -42,6 +42,7 @@ export default function ClientTrust() {
             </p>
 
             <ArrowDownButton
+            className="max-w-85"
               text="Book A Consultation"
               link="/contact"
             />
@@ -96,11 +97,11 @@ export default function ClientTrust() {
 
       </div> */}
 
-          <div className="-rotate-2 z-40 absolute translate-y-[-50%] origin-center shadow-2xl">
+          <div className="-rotate-[1.8deg] z-40 absolute translate-y-[-50%] origin-center shadow-2xl">
 
-          <Marquee className="bg-white text-black text-2xl py-6 " autoFill >
-  <div className="flex gap-6 uppercase font-semibold items-center px-6">
-    Your be spoke real estate family office 
+          <Marquee className="bg-white text-black text-xl sm:text-2xl  py-6 " autoFill >
+  <div className="flex gap-6 uppercase font-semibold items-center px-2 sm:px-6">
+    Your bespoke real estate family office 
     <img src="./AboutPage/Star.svg" alt="" />
   </div>
 </Marquee>

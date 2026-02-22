@@ -1,25 +1,37 @@
 "use client";
 
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import useEmblaCarousel from "embla-carousel-react";
 import { blogsData } from "@/testings/sampleData/blogs";
 import ArrowSlideButton from "@/components/common/ArrowSlideButton";
 import Arrow from "../common/Arrow";
+
 export default function BlogsHero() {
   const total = blogsData.length;
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    align: "start",
+    containScroll: "trimSnaps", // ⭐ IMPORTANT FIX
+  });
+
   const [index, setIndex] = useState(0);
 
-  const prev = () => {
-    setIndex((p) => (p === 0 ? total - 1 : p - 1));
-  };
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setIndex(emblaApi.selectedScrollSnap());
+  }, [emblaApi]);
 
-  const next = () => {
-    setIndex((p) => (p + 1) % total);
-  };
+  useEffect(() => {
+    if (!emblaApi) return;
+    emblaApi.on("select", onSelect);
+    onSelect();
+  }, [emblaApi, onSelect]);
 
-  const firstBlog = blogsData[index];
-  const secondBlog = blogsData[(index + 1) % total];
+  const prev = () => emblaApi && emblaApi.scrollPrev();
+  const next = () => emblaApi && emblaApi.scrollNext();
 
   return (
     <section id="blogs" className="section section-light">
@@ -41,46 +53,54 @@ export default function BlogsHero() {
           </div>
         </div>
 
-        {/* ================= MAIN ROW (REFERENCE LINE) ================= */}
+        {/* ================= MAIN ================= */}
         <div className="mt-16 grid sm:grid-cols-[20%_1fr] sm:gap-36 items-stretch">
 
-          {/* LEFT COLUMN */}
+          {/* LEFT SIDE (Counter + Arrows) */}
           <div className="flex sm:flex-col justify-between h-32 sm:h-105">
-
-            {/* COUNTER — aligned to card top */}
             <div className="flex items-baseline gap-2 translate-y-px">
               <span className="text-6xl font-semibold leading-none">
                 {String(index + 1).padStart(2, "0")}
               </span>
-              <span className="text-xl opacity-60 leading-none">
-                / {total}
-              </span>
+              <span className="text-xl opacity-60 leading-none">/ {total}</span>
             </div>
 
-            {/* ARROWS — same axis as counter */}
             <div className="flex gap-6">
               <button
                 onClick={prev}
-                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
+                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition"
               >
-                 <Arrow className="rotate-180" />
+                <Arrow className="rotate-180" />
               </button>
+
               <button
                 onClick={next}
-                className="w-20 h-20 p-4 rounded-full cursor-pointer border-2 border-black flex items-center justify-center text-2xl hover:bg-black hover:text-white transition"
+                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition"
               >
-                {/* <img src="/images/Arrow.svg" alt="" />
-                 */}
-                 <Arrow />
+                <Arrow />
               </button>
             </div>
-
           </div>
 
-          {/* RIGHT COLUMN — BLOG CARDS */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <BlogCard blog={firstBlog} />
-            <BlogCard blog={secondBlog} />
+          {/* ================= CAROUSEL ================= */}
+          <div ref={emblaRef} className="overflow-hidden ">
+            <div className="flex">
+              {blogsData.map((blog, i) => (
+                <div
+                  key={i}
+                  className="
+                    min-w-[100%] md:min-w-[50%]
+                    flex
+                    
+                  "
+                >
+                  {/* ⭐ Embla-safe spacing inside slide */}
+                  <div className="w-full px-2 sm:pl-6">
+                    <BlogCard blog={blog} />
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
         </div>
@@ -98,26 +118,12 @@ function BlogCard({ blog }: { blog: any }) {
       <div className="absolute inset-0 bg-black/50" />
 
       <div className="relative z-10 p-6 text-white space-y-4">
-        <h3 className="font-body text-lg font-semibold">
-          {blog.title}
-        </h3>
+        <h3 className="font-body text-lg font-semibold">{blog.title}</h3>
 
-        <p className="text-sm opacity-80 line-clamp-3">
-          {blog.description}
-        </p>
+        <p className="text-sm opacity-80 line-clamp-3">{blog.description}</p>
 
         <Link href={blog.url}>
-          <button className="w-full
-    bg-[#B8D779]
-    text-black
-    rounded-full
-    py-2
-    text-sm
-    font-semibold
-    text-center
-    cursor-pointer
-    hover:opacity-90
-    transition">
+          <button className="w-full bg-[#B8D779] text-black rounded-full py-2 text-sm font-semibold hover:opacity-90 transition">
             Read Now
           </button>
         </Link>

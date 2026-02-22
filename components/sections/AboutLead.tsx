@@ -34,6 +34,7 @@ export default function AboutLead() {
 
             {/* CTA BUTTON */}
             <ArrowSlideButton
+            className="max-w-80"
   text="Book A Consultation"
   link="/about" 
 />

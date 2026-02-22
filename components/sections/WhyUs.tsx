@@ -43,7 +43,7 @@ export default function WhyUs() {
           </p>
 
           <div className="flex justify-center pt-2">
-            <ArrowSlideButton text="Book A Consultation" link="/contact" />
+            <ArrowSlideButton className="max-w-80" text="Book A Consultation" link="/contact" />
           </div>
         </div>
 

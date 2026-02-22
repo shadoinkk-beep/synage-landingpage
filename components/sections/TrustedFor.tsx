@@ -119,7 +119,7 @@ export default function TrustedFor() {
                     </h2>
 
                     {/* RIGHT: PARAGRAPH (SLIGHTLY PUSHED RIGHT) */}
-                    <p className="font-body text-sm md:text-base text-white/70 max-w-md lg:ml-6">
+                    <p className="font-body sm:text-right text-sm md:text-base text-white/70 max-w-md lg:ml-6">
                         Synage supports ₹100Cr+ - ₹1000Cr+ decisions in Gurgaon and South Delhi.
                         Clients choose us for real execution, discreet representation, and
                         end-to-end ownership support that continues after the deal closes.

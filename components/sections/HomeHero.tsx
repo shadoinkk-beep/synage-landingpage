@@ -1,18 +1,27 @@
 import Image from "next/image";
 import ArrowDownButton from "../common/ArrowDownButton";
 import Marquee from "react-fast-marquee";
+import HeroBg from "@/public/HomePage/Hero_BG.png";
+
 
 export default function HomeHero() {
     return (
         <section
             className="relative overflow-hidden text-white bg-[#0b0b0b]"
-            style={{
-                backgroundImage: "url('/HomePage/Hero_BG.png')",
-                backgroundRepeat: "no-repeat",
-                backgroundPosition: "top center",
-                backgroundSize: "100% auto",
-            }}
+            // style={{
+            //     backgroundImage: "url('/HomePage/Hero_BG.png')",
+            //     backgroundRepeat: "no-repeat",
+            //     backgroundPosition: "top center",
+            //     backgroundSize: "100% auto",
+            // }}
         >
+            <Image
+                src={HeroBg}
+                alt="Luxury real estate models in Gurgaon and South Delhi"
+                fill
+                className="object-contain"
+                placeholder="blur"
+            />
             {/* Dark overlay */}
             <div className="absolute inset-0 bg-black/60" />
 
@@ -62,11 +71,11 @@ export default function HomeHero() {
                     </p>
 
                     {/* CTA */}
-                    <div className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col sm:items-end gap-3 pointer-events-auto">
+                    <div className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col  gap-3 pointer-events-auto">
 
                         <div className="group">
-                            <ArrowDownButton text="Book A Consultation" link="/contact" />
-                        </div>
+                            <ArrowDownButton className="w-full" text="Book A Consultation" link="/contact" />
+                        </div> 
 
                         <p className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/70">
                             Recommended for better communication

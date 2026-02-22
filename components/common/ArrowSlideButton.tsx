@@ -5,16 +5,20 @@ import Link from "next/link";
 interface ArrowSlideButtonProps {
   text: string;
   link: string;
+  className?: string;
 }
 
 export default function ArrowSlideButton({
   text,
   link,
+  className
 }: ArrowSlideButtonProps) {
   return (
     <Link
       href={link}
-      className="group relative inline-flex items-center justify-center w-full max-w-80 px-6 py-4 rounded-full bg-[#B8D779] text-black hover:bg-black hover:text-white transition-all duration-300 overflow-hidden"
+      aria-label={text}
+      className={`${className} group relative inline-flex items-center justify-center w-full  px-6 py-4 rounded-full bg-[#B8D779] text-black hover:bg-black hover:text-white transition-all duration-300 overflow-hidden`}
+      // className="group relative inline-flex items-center justify-center w-full  px-6 py-4 rounded-full bg-[#B8D779] text-black hover:bg-black hover:text-white transition-all duration-300 overflow-hidden"
     >
       {/* Arrow Circle */}
       <span className="absolute left-2 flex items-center justify-center w-12 h-12 rounded-full bg-black transition-all duration-500 ease-in-out 

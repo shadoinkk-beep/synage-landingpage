@@ -22,6 +22,7 @@ export const GetExpertExecution = ()=>{
 
           <div className="flex justify-center pt-2">
             <ArrowSlideButton
+            className="max-w-80"
               text="Book A Consultation"
               link="/contact"
             />

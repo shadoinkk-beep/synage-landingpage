@@ -12,6 +12,17 @@
   font-family: var(--font-heading);
 }
 
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling */
+}
+
+.slide-left {
+  transform: translateX(-50%);
+}
+
+.slide-right {
+  transform: translateX(50%);
+}
 
 
 /* :root {
@@ -58,6 +69,11 @@ body {
 
 .section-light{
   @apply bg-[#FBF7F0] text-[#02131B];
+
+}
+
+.bg-dark{
+  @apply bg-[#02131B];
 
 }
 

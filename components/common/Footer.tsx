@@ -30,7 +30,7 @@ export default function Footer() {
 
                             <ArrowSlideButton
                                 text="Contact Us Now"
-                                link="/contact"
+                                link="/#contact"
                             />
                         </div>
 

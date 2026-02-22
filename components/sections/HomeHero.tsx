@@ -1,20 +1,25 @@
+"use client";
+
 import Image from "next/image";
 import ArrowDownButton from "../common/ArrowDownButton";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 import HeroBg from "@/public/HomePage/Hero_BG.png";
 
-
 export default function HomeHero() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const check = () => setIsMobile(window.innerWidth < 640);
+        check();
+        window.addEventListener("resize", check);
+        return () => window.removeEventListener("resize", check);
+    }, []);
+
     return (
-        <section
-            className="relative overflow-hidden text-white bg-[#0b0b0b]"
-            // style={{
-            //     backgroundImage: "url('/HomePage/Hero_BG.png')",
-            //     backgroundRepeat: "no-repeat",
-            //     backgroundPosition: "top center",
-            //     backgroundSize: "100% auto",
-            // }}
-        >
+        <section className="relative overflow-hidden text-white bg-[#0b0b0b]">
+
             <Image
                 src={HeroBg}
                 alt="Luxury real estate models in Gurgaon and South Delhi"
@@ -22,94 +27,130 @@ export default function HomeHero() {
                 className="object-contain"
                 placeholder="blur"
             />
-            {/* Dark overlay */}
+
             <div className="absolute inset-0 bg-black/60" />
 
             <div className="relative z-10 flex min-h-screen flex-col section-content py-0!">
 
                 {/* ================= TEXT CONTENT ================= */}
-                <div className="flex-1 flex flex-col items-center justify-start  pt-24 text-center  mx-auto">
+                <motion.div
+                    className="sm:flex-1 flex flex-col items-center justify-start pt-24 text-center mx-auto"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
 
-                    {/* Tagline */}
-                    <p className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white">
+                    {/* Tagline with SVGs */}
+                    <motion.p
+                        className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white"
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.3 }}
+                    >
+                        {/* LEFT SVG */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="6" viewBox="0 0 81 6" fill="none">
-<path d="M80.6686 2.66663C80.6686 1.19387 79.4747 -4.07696e-05 78.002 -4.07696e-05C76.5292 -4.07696e-05 75.3353 1.19387 75.3353 2.66663C75.3353 4.13939 76.5292 5.33329 78.002 5.33329C79.4747 5.33329 80.6686 4.13939 80.6686 2.66663ZM78.002 2.66663V2.16663L0.000350952 2.16663V2.66663V3.16663L78.002 3.16663V2.66663Z" fill="#B8D779"/>
-</svg>
+                            <path d="M80.6686 2.66663C80.6686 1.19387 79.4747 -4.07696e-05 78.002 -4.07696e-05C76.5292 -4.07696e-05 75.3353 1.19387 75.3353 2.66663C75.3353 4.13939 76.5292 5.33329 78.002 5.33329C79.4747 5.33329 80.6686 4.13939 80.6686 2.66663ZM78.002 2.66663V2.16663L0.000350952 2.16663V2.66663V3.16663L78.002 3.16663V2.66663Z" fill="#B8D779"/>
+                        </svg>
+
                         Investment Advisory, Property & Portfolio Management
 
+                        {/* RIGHT SVG */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="6" viewBox="0 0 81 6" fill="none">
-<path d="M0.000325441 2.66663C0.000325441 4.13939 1.19423 5.33329 2.66699 5.33329C4.13975 5.33329 5.33366 4.13939 5.33366 2.66663C5.33366 1.19387 4.13975 -4.07696e-05 2.66699 -4.07696e-05C1.19423 -4.07696e-05 0.000325441 1.19387 0.000325441 2.66663ZM2.66699 2.66663V3.16663H80.6686V2.66663V2.16663H2.66699V2.66663Z" fill="#B8D779"/>
-</svg>
-                    </p>
+                            <path d="M0.000325441 2.66663C0.000325441 4.13939 1.19423 5.33329 2.66699 5.33329C4.13975 5.33329 5.33366 4.13939 5.33366 2.66663C5.33366 1.19387 4.13975 -4.07696e-05 2.66699 -4.07696e-05C1.19423 -4.07696e-05 0.000325441 1.19387 0.000325441 2.66663ZM2.66699 2.66663V3.16663H80.6686V2.66663V2.16663H2.66699V2.66663Z" fill="#B8D779"/>
+                        </svg>
+                    </motion.p>
 
-                    {/* SEO Primary Heading */}
-                    <h1 className="font-body  leading-tight text-[clamp(1.8rem,4vw,2.8rem)]">
+                    {/* Primary Heading */}
+                    <motion.h1
+                        className="font-body leading-tight text-[clamp(1.8rem,4vw,2.8rem)]"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5, duration: 0.8 }}
+                    >
                         Buy and manage luxury real estate with Synage
-                    </h1>
+                    </motion.h1>
 
                     {/* Secondary Heading */}
-                    {/* <h2 className="mt-4 text-5xl font-heading text-[clamp(2.5rem,5vw,4rem)]"> */}
-                    <h2 className="mt-4  font-heading text-2x md:text-8xl">
+                    <motion.h2
+                        className="mt-4 font-heading text-2x md:text-8xl"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.8, duration: 0.8 }}
+                    >
                         In Gurgaon and South Delhi.
-                    </h2>
+                    </motion.h2>
 
-                    {/* Description */}
                     <div className="grid gap-4 mt-16">
-                    <p className="sm:absolute grid
-    bottom-24
-    sm:left-6
-    lg:left-8
-    max-w-md
-    text-sm
-    md:text-base
-    text-white/80
-    text-justify
-    leading-relaxed">
-                        Synage helps HNIs and NRIs buy, sell, lease, and manage premium assets
-                        across condos, villas, farmhouses, and pre-rented properties with a
-                        resale-first approach and end-to-end ownership support.
-                    </p>
 
-                    {/* CTA */}
-                    <div className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col  gap-3 pointer-events-auto">
+                        {/* Description */}
+                        <motion.p
+                            className="sm:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-justify leading-relaxed"
+                            initial={{
+                                opacity: 0,
+                                y: isMobile ? 60 : 0,
+                                x: isMobile ? 0 : -40
+                            }}
+                            animate={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{
+                                delay: isMobile ? 1.6 : 1.2,
+                                duration: isMobile ? 1.2 : 0.8,
+                                ease: [0.22, 1, 0.36, 1] // luxury easing
+                            }}
+                        >
+                            Synage helps HNIs and NRIs buy, sell, lease, and manage premium assets
+                            across condos, villas, farmhouses, and pre-rented properties with a
+                            resale-first approach and end-to-end ownership support.
+                        </motion.p>
 
-                        <div className="group">
-                            <ArrowDownButton className="w-full" text="Book A Consultation" link="/contact" />
-                        </div> 
+                        {/* CTA */}
+                        <motion.div
+                            className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col gap-3 pointer-events-auto"
+                            initial={{
+                                opacity: 0,
+                                y: isMobile ? 60 : 0,
+                                x: isMobile ? 0 : 40
+                            }}
+                            animate={{ opacity: 1, y: 0, x: 0 }}
+                            transition={{
+                                delay: isMobile ? 1.9 : 1.2,
+                                duration: isMobile ? 1.2 : 0.8,
+                                ease: [0.22, 1, 0.36, 1]
+                            }}
+                        >
+                            <ArrowDownButton
+                                className="w-full"
+                                text="Book A Consultation"
+                                link="/contact"
+                            />
 
-                        <p className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/70">
-                            Recommended for better communication
-                        </p>
+                            <p className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/70">
+                                Recommended for better communication
+                            </p>
+                        </motion.div>
+
                     </div>
-                    </div>
+                </motion.div>
 
-                </div>
-
-                {/* ================= BUILDINGS ================= */}
-                {/* <div className="relative flex justify-center pb-28">
-                    <Image
-                        src="/HomePage/hero-buildings.png"
-                        alt="Luxury real estate models in Gurgaon and South Delhi"
-                        width={600}
-                        height={600}
-                        priority
-                        className="w-[70%] max-w-140 h-auto"
-                    />
-                </div> */}
-
-                {/* ================= BRANDS MARQUEE (SINGLE IMAGE) ================= */}
-                <Marquee className="bg-black text-black text-2xl py-1" autoFill >
-                    {
-                        companeis.map((item, index) => <img className="px-12 py-4" src={item} alt="" />   )
-
-                    }
-                </Marquee>
+                {/* Marquee */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ delay: 2 }}
+                >
+                    <Marquee
+                        className="bg-black text-black text-2xl py-1 flex-1 sm:flex-none"
+                        autoFill
+                    >
+                        {companeis.map((item, index) => (
+                            <img key={index} className="px-12 py-4" src={item} alt="" />
+                        ))}
+                    </Marquee>
+                </motion.div>
 
             </div>
         </section>
     );
 }
-
 
 const companeis = [
     "/clientCompany/DHL.png",
@@ -118,4 +159,4 @@ const companeis = [
     "/clientCompany/Careerbuilder.png",
     "/clientCompany/Genpact.png",
     "/clientCompany/Abb.png",
-]
+];

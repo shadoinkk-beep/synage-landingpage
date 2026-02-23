@@ -28,7 +28,7 @@ export default function HomeHero() {
                 placeholder="blur"
             />
 
-            <div className="absolute inset-0 bg-black/60" />
+            {/* <div className="absolute inset-0 bg-black/60" /> */}
 
             <div className="relative z-10 flex min-h-screen flex-col section-content py-0!">
 
@@ -62,7 +62,7 @@ export default function HomeHero() {
 
                     {/* Primary Heading */}
                     <motion.h1
-                        className="font-body leading-tight text-[clamp(1.8rem,4vw,2.8rem)]"
+                        className="font-body leading-tight text-2xl md:text-4xl lg:text-4Wxl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
@@ -72,7 +72,7 @@ export default function HomeHero() {
 
                     {/* Secondary Heading */}
                     <motion.h2
-                        className="mt-4 font-heading text-2x md:text-8xl"
+                        className="mt-4 font-heading text-2xl md:text-6xl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
@@ -142,7 +142,7 @@ export default function HomeHero() {
                         autoFill
                     >
                         {companeis.map((item, index) => (
-                            <img key={index} className="px-12 py-4" src={item} alt="" />
+                            <img key={index} className="px-12 py-4 h-18" src={item} alt="" />
                         ))}
                     </Marquee>
                 </motion.div>
@@ -153,10 +153,21 @@ export default function HomeHero() {
 }
 
 const companeis = [
-    "/clientCompany/DHL.png",
-    "/clientCompany/Samsung.png",
-    "/clientCompany/Kotak.png",
-    "/clientCompany/Careerbuilder.png",
-    "/clientCompany/Genpact.png",
-    "/clientCompany/Abb.png",
+    "/clientCompany/Logo 1.png",
+    "/clientCompany/Logo 2.png",
+    "/clientCompany/Logo 3.png",
+    "/clientCompany/Logo 4.png",
+    "/clientCompany/Logo 5.png",
+    "/clientCompany/Logo 6.png",
+    "/clientCompany/Logo 7.png",
+    "/clientCompany/Logo 8.png",
+    "/clientCompany/Logo 9.png",
+    "/clientCompany/Logo 10.png",
+    "/clientCompany/Logo 11.png",
+    "/clientCompany/Logo 12.png",
+    "/clientCompany/Logo 13.png",
+    "/clientCompany/Logo 14.png",
+    "/clientCompany/Logo 15.png",
+    "/clientCompany/Logo 16.png",  
+
 ];

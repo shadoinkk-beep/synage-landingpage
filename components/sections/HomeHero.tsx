@@ -24,7 +24,7 @@ export default function HomeHero() {
                 src={HeroBg}
                 alt="Luxury real estate models in Gurgaon and South Delhi"
                 fill
-                className="object-contain"
+                className="object-cover"
                 placeholder="blur"
             />
 
@@ -42,7 +42,7 @@ export default function HomeHero() {
 
                     {/* Tagline with SVGs */}
                     <motion.p
-                        className="mb-6 flex items-center gap-3 text-xs uppercase tracking-[0.3em] text-white"
+                        className="mb-6 flex items-center gap-3 text-xs tracking-wide  text-white"
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.3 }}
@@ -62,7 +62,7 @@ export default function HomeHero() {
 
                     {/* Primary Heading */}
                     <motion.h1
-                        className="font-body leading-tight text-2xl md:text-4xl lg:text-4Wxl"
+                        className="font-body leading-tight text-xl md:text-2xl lg:text-3xl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.5, duration: 0.8 }}
@@ -72,7 +72,7 @@ export default function HomeHero() {
 
                     {/* Secondary Heading */}
                     <motion.h2
-                        className="mt-4 font-heading text-2xl md:text-6xl"
+                        className="mt-4 font-heading text-5xl md:text-7xl"
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.8, duration: 0.8 }}
@@ -138,11 +138,11 @@ export default function HomeHero() {
                     transition={{ delay: 2 }}
                 >
                     <Marquee
-                        className="bg-black text-black text-2xl py-1 flex-1 sm:flex-none"
+                        className="sm:bg-black text-black text-2xl py-1 flex-1 sm:flex-none"
                         autoFill
                     >
                         {companeis.map((item, index) => (
-                            <img key={index} className="px-12 py-4 h-18" src={item} alt="" />
+                            <img key={index} className="px-6 sm:px-16 py-4 h-12 sm:h-16"  src={item} alt="" />
                         ))}
                     </Marquee>
                 </motion.div>

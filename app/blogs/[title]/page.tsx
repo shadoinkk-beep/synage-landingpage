@@ -1,5 +1,4 @@
 // app/insights/[title]/page.tsx
-export const dynamic = "force-dynamic";
 import PostClient from "./PostClient";
 import { fetchPostByTitle } from "@/lib/fetchPostByTitle";
 import { Eye, ThumbsUp } from "lucide-react";
@@ -14,9 +13,9 @@ interface Props {
 export async function generateMetadata({ params }: Props) {
   const { title } = await params;
   const titleParam = Array.isArray(title) ? title[0] : title;
-  console.log(titleParam);
+  // console.log(titleParam);
   const decodedTitle = decodeURIComponent(titleParam || "");
-  console.log(decodedTitle);
+  // console.log(decodedTitle);
   const post = await fetchPostByTitle(decodedTitle);
 
   if (!post) {

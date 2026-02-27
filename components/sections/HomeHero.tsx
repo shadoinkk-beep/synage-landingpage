@@ -28,7 +28,7 @@ export default function HomeHero() {
                 placeholder="blur"
             />
 
-            {/* <div className="absolute inset-0 bg-black/60" /> */}
+            <div className="absolute inset-0 bg-black/60 sm:hidden" />
 
             <div className="relative z-10 flex min-h-screen flex-col section-content py-0!">
 
@@ -120,7 +120,7 @@ export default function HomeHero() {
                             <ArrowDownButton
                                 className="w-full"
                                 text="Book A Consultation"
-                                link="/contact"
+                                link="/#contact"
                             />
 
                             <p className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-white/70">

@@ -86,12 +86,12 @@ const handleView = async () => {
         transition={Bounce}
       />
 
-      <div className="flex flex-wrap gap-4 mt-6 items-center border-t border-gray-200 pt-4">
+      <div className="flex flex-wrap gap-4 mt-6 items-center border-t border-gray-200 pt-4 ">
         {/* 3D-like Like Button */}
         <button
           onClick={handleLike}
           className={`flex gap-2 items-center cursor-pointer px-4 py-2 rounded-lg font-semibold shadow-md transition-transform transform active:scale-95 active:translate-y-1 ${
-            liked ? "bg-red-500 text-white shadow-red-400" : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+            liked ? "bg-[#B8D779] text-white shadow-red-400" : "bg-gray-100 text-gray-800 hover:bg-gray-200"
           }`}
         >
           <ThumbsUp className={`${liked ? "text-white" : "text-gray-800"}`} />

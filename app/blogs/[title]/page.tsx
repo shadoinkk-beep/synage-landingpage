@@ -90,7 +90,7 @@ const formattedDate = post.createdAt?.seconds
   };
 
   return (
-    <article className="mx-auto max-w-7xl px-4 md:px-6 xl:px-0 space-y-6 py-36">
+    <article className="section-content py-20!">
       <Script type="application/ld+json" id="blog-json-ld">
         {JSON.stringify(jsonLd)}
       </Script>
@@ -103,7 +103,7 @@ const formattedDate = post.createdAt?.seconds
         />
       )}
 
-      <h1 className="text-4xl font-bold">{serverRenderedPost.heading}</h1>
+      <h1 className="text-4xl font-bold py-3">{serverRenderedPost.heading}</h1>
 
       <div className="flex flex-wrap gap-6 justify-between sm:justify-start text-sm text-gray-500">
         <div className="flex gap-2">

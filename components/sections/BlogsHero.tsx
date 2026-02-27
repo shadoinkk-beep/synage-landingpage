@@ -80,7 +80,7 @@ export default function BlogsHero() {
               and NRI ownership across Gurgaon and South Delhi.
             </p>
 
-            <ArrowSlideButton text="View All Blogs" link="/blogs" />
+            <ArrowSlideButton text="View All Blogs" link="/#blogs" />
           </motion.div>
         </div>
 
@@ -183,7 +183,7 @@ function BlogCard({ blog }: { blog: any }) {
         </p>
 
         <Link href={blog.url}>
-          <button className="w-full bg-[#B8D779] text-black rounded-full py-2 text-sm font-semibold hover:opacity-90 transition">
+          <button className="w-full cursor-pointer bg-[#B8D779] text-black rounded-full py-2 text-sm font-semibold hover:opacity-90 transition">
             Read Now
           </button>
         </Link>

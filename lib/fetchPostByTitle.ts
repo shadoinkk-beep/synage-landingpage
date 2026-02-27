@@ -32,7 +32,7 @@ export async function fetchPostByTitle(title: string): Promise<Post | null> {
   where("status", "==", "active")
 );
     const snapshot = await getDocs(q);
-    console.log(snapshot);
+    // console.log(snapshot);
 
     if (!snapshot.empty) {
       const docData = snapshot.docs[0].data() as Post;

@@ -1,4 +1,5 @@
 // app/insights/[title]/page.tsx
+export const dynamic = "force-dynamic";
 import PostClient from "./PostClient";
 import { fetchPostByTitle } from "@/lib/fetchPostByTitle";
 import { Eye, ThumbsUp } from "lucide-react";

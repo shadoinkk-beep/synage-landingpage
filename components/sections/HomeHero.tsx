@@ -84,7 +84,7 @@ export default function HomeHero() {
 
                         {/* Description */}
                         <motion.p
-                            className="sm:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-justify leading-relaxed"
+                            className="sm:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-center sm:text-justify leading-relaxed"
                             initial={{
                                 opacity: 0,
                                 y: isMobile ? 60 : 0,

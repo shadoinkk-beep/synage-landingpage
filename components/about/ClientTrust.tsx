@@ -87,7 +87,7 @@ export default function ClientTrust() {
               className="lg:col-span-6 space-y-6 max-w-full"
               variants={slideLeft}
             >
-              <p className="text-sm md:text-base leading-relaxed max-w-xl">
+              <p className="text-sm md:text-base leading-relaxed max-w-xl text-center sm:text-left">
                 Synage Consultants is built on long-term client relationships and a
                 referral-led reputation earned since 2009. We work with HNIs,
                 CXOs, business owners, and NRIs across Gurgaon and South Delhi,

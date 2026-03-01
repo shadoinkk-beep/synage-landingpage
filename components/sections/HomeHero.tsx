@@ -50,7 +50,7 @@ export default function HomeHero() {
   className="object-cover block sm:hidden"
 />
 
-            <div className="absolute inset-0 bg-black/60 sm:hidden" />
+            <div className="absolute inset-0 bg-black/20 sm:hidden" />
 
             <div className="relative z-10 flex min-h-screen flex-col section-content py-0!">
 

@@ -6,6 +6,9 @@ import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HeroBg from "@/public/HomePage/Hero_BG.png";
+import HeroPhoneBg from "@/public/HomePage/HeroPhone.jpeg";
+import HeroTabBg from "@/public/HomePage/HeroTab.jpeg";
+
 
 export default function HomeHero() {
     const [isMobile, setIsMobile] = useState(false);
@@ -20,13 +23,32 @@ export default function HomeHero() {
     return (
         <section className="relative overflow-hidden text-white bg-[#0b0b0b]">
 
-            <Image
-                src={HeroBg}
-                alt="Luxury real estate models in Gurgaon and South Delhi"
-                fill
-                className="object-cover"
-                placeholder="blur"
-            />
+{/* Desktop */}
+<Image
+  src={HeroBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover hidden lg:block"
+/>
+
+{/* Tablet */}
+<Image
+  src={HeroTabBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover hidden sm:block lg:hidden"
+/>
+
+{/* Mobile */}
+<Image
+  src={HeroPhoneBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover block sm:hidden"
+/>
 
             <div className="absolute inset-0 bg-black/60 sm:hidden" />
 
@@ -84,7 +106,7 @@ export default function HomeHero() {
 
                         {/* Description */}
                         <motion.p
-                            className="sm:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-center sm:text-justify leading-relaxed"
+                            className="md:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-center sm:text-justify leading-relaxed"
                             initial={{
                                 opacity: 0,
                                 y: isMobile ? 60 : 0,
@@ -104,7 +126,7 @@ export default function HomeHero() {
 
                         {/* CTA */}
                         <motion.div
-                            className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col gap-3 pointer-events-auto"
+                            className="md:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col gap-3 pointer-events-auto"
                             initial={{
                                 opacity: 0,
                                 y: isMobile ? 60 : 0,

@@ -169,7 +169,7 @@ export default function WhyUs() {
             custom={4}
           >
             <Image
-              src="/HomePage/Hero_BG.png"
+              src="/images/Why Synage 1.jpeg"
               alt="Established Legacy"
               fill
               className="object-cover"

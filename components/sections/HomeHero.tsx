@@ -160,7 +160,7 @@ export default function HomeHero() {
                     transition={{ delay: 2 }}
                 >
                     <Marquee
-                        className="sm:bg-black text-black text-2xl py-1 flex-1 sm:flex-none"
+                        className=" text-black text-2xl py-1 flex-1 sm:flex-none"
                         autoFill
                     >
                         {companeis.map((item, index) => (

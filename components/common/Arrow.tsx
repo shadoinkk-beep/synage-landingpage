@@ -8,8 +8,6 @@ const Arrow: React.FC<ArrowProps> = ({ className, ...props }) => {
   return (
     <svg
       viewBox="0 0 73 45"
-      fill="black"
-      color="black"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       {...props}

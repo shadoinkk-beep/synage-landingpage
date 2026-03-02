@@ -1,3 +1,6 @@
+import BlogList from "@/components/blogs/BlogList";
+import RecentPosts from "@/components/blogs/RecentPosts";
+import Footer from "@/components/common/Footer";
 import { Metadata } from "next";
 
 /*
@@ -71,10 +74,9 @@ export default function BlogsLandingPage() {
         📝 Blog listing UI goes here
         🔁 Replace with your blog grid component later
       */}
-      <div>
-        {/* Blog list component */}
-        Blogs
-      </div>
+      {/* <RecentPosts/> */}
+      <BlogList/>
+      <Footer/>
     </>
   );
 }

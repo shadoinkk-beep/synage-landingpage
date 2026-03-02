@@ -91,7 +91,7 @@ export default function Footer() {
             {/* BOTTOM BAR */}
 
             {/* BOTTOM BAR */}
-            <section className="bg-black">
+            <section className="bg-dark">
                 <div className="w-full px-6">
                     <div className="h-14 flex items-center justify-between text-xs text-white">
                         <p>

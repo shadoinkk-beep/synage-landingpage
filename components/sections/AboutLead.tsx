@@ -77,7 +77,7 @@ export default function AboutLead() {
             >
               <ArrowSlideButton
                 className="max-w-80"
-                text="Book A Consultation"
+                text="Know More"
                 link="/about"
               />
             </motion.div>

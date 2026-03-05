@@ -101,13 +101,13 @@ export default function Founders() {
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/kunalmilwani/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>
@@ -137,13 +137,13 @@ export default function Founders() {
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/ujjwalsethi-synage/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>
@@ -181,13 +181,13 @@ export default function Founders() {
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/ujjwalsethi-synage/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>

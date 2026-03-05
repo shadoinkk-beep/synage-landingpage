@@ -63,9 +63,9 @@ export default function Footer() {
     <div>
       <h4 className="font-bold text-lg mb-4">Socials</h4>
       <ul className="space-y-2 text-sm">
-        <li><Link href="#">LinkedIn</Link></li>
+        <li><Link target="_blank" href="https://www.linkedin.com/company/synageconsultants/">LinkedIn</Link></li>
         <li><Link href="#">Facebook</Link></li>
-        <li><Link href="#">Instagram</Link></li>
+        <li><Link target="_blank" href="https://www.instagram.com/synage_consultants/">Instagram</Link></li>
       </ul>
     </div>
 
@@ -100,9 +100,9 @@ export default function Footer() {
                         </p>
 
                         <div className="flex gap-4 text-base">
-                            <Link href="#" aria-label="LinkedIn"><FaLinkedin /></Link>
+                            <Link target="_blank" href="https://www.linkedin.com/company/synageconsultants/" aria-label="LinkedIn"><FaLinkedin /></Link>
                             <Link href="#" aria-label="Facebook"><FaFacebook /></Link>
-                            <Link href="#" aria-label="Instagram"><FaInstagram /></Link>
+                            <Link target="_blank" href="https://www.instagram.com/synage_consultants/" aria-label="Instagram"><FaInstagram /></Link>
                         </div>
                     </div>
                 </div>

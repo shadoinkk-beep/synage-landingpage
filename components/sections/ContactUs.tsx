@@ -220,7 +220,7 @@ const data = {
 
                 <div>
                   <label className="block text-[15px] font-semibold mb-2 text-black">
-                    Select Date
+                    Select Date <span className="text-red-500">*</span>
                   </label>
 
                   <input
@@ -234,7 +234,7 @@ const data = {
 
                 <div>
                   <label className="block text-[15px] font-semibold mb-2 text-black">
-                    Select Time Slot
+                    Select Time Slot <span className="text-red-500">*</span>
                   </label>
 
                   <select
@@ -292,7 +292,7 @@ function FormField({
   return (
     <div>
       <label className="block text-[15px] font-semibold mb-2 text-black">
-        {label}
+        {label} {required && <span className="text-red-500">*</span>}
       </label>
       <input
         required={required}
@@ -321,11 +321,11 @@ function TextareaField({ label, placeholder, name }: any) {
   );
 }
 
-function PhoneField({ phone, setPhone }: any) {
+function PhoneField({ phone, setPhone, required }: any) {
   return (
     <div>
       <label className="block text-[15px] font-semibold mb-2 text-black">
-        Phone No.
+        Phone No. {required && <span className="text-red-500">*</span>}
       </label>
       <PhoneInput
         country="in"

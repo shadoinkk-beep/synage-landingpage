@@ -116,6 +116,8 @@ export default function Services() {
           swipeable
           draggable
           infinite={false}
+          autoPlay={true}
+          autoPlaySpeed={2000}
           afterChange={(_, state) => setActiveIndex(state.currentSlide)}
           responsive={{
             all: {

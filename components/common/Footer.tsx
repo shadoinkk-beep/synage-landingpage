@@ -12,79 +12,80 @@ export default function Footer() {
                 <div className="section-content">
 
                     {/* INNER GRID (ONLY HERE) */}
-                    <div className="grid grid-cols-1 md:grid-cols-12 gap-12">
+                   <div className="grid lg:grid-cols-[1fr_2fr] gap-20 sm:gap-40">
 
-                        {/* LEFT BRAND */}
-                        <div className="md:col-span-4 space-y-6">
-                            <Image
-                                src="/Logo_Synage_Colored_WithTagline.png"
-                                alt="Synage Consultants"
-                                width={220}
-                                height={70}
-                                priority
-                            />
+  {/* LEFT BRAND */}
+  <div className="space-y-6">
+    <Image
+      src="/Logo_Synage_Colored_WithTagline.png"
+      alt="Synage Consultants"
+      width={220}
+      height={70}
+      priority
+    />
 
-                            <p className="text-sm max-w-sm">
-                                Bespoke Family Office for Real Estate
-                            </p>
+    <ArrowSlideButton
+      text="Contact Us Now"
+      link="/#contact"
+    />
+  </div>
 
-                            <ArrowSlideButton
-                                text="Contact Us Now"
-                                link="/#contact"
-                            />
-                        </div>
+  {/* RIGHT SECTIONS */}
+  <div className="grid grid-cols-2 md:grid-cols-[1.2fr_0.8fr_0.5fr_1fr] gap-6">
 
-                        {/* SERVICES */}
-                        <div className="md:col-span-3 space-y-4">
-                            <h4 className="font-bold text-lg">Services</h4>
-                            <ul className="space-y-2 text-sm">
-                                <li><Link href="/#services">Luxury Villas</Link></li>
-                                <li><Link href="/#services">Luxury Condos</Link></li>
-                                <li><Link href="/#services">Portfolio Management</Link></li>
-                                <li><Link href="/#services">NRI End-to-End Execution</Link></li>
-                                <li><Link href="/#services">Luxury Investment Advisory</Link></li>
-                                <li><Link href="/#services">Luxury Transaction Advisory</Link></li>
-                                <li><Link href="/#services">Leasing & Property Management</Link></li>
-                            </ul>
-                        </div>
+    {/* SERVICES */}
+    <div>
+      <h4 className="font-bold text-lg mb-4">Services</h4>
+      <ul className="space-y-2 text-sm">
+        <li><Link href="/#services">Luxury Villas</Link></li>
+        <li><Link href="/#services">Luxury Condos</Link></li>
+        <li><Link href="/#services">Portfolio Management</Link></li>
+        <li><Link href="/#services">NRI End-to-End Execution</Link></li>
+        <li><Link href="/#services">Luxury Investment Advisory</Link></li>
+        <li><Link href="/#services">Luxury Transaction Advisory</Link></li>
+        <li><Link href="/#services">Leasing & Property Management</Link></li>
+      </ul>
+    </div>
 
-                        {/* COMPANY */}
-                        <div className="md:col-span-2 space-y-4">
-                            <h4 className="font-bold text-lg">Company</h4>
-                            <ul className="space-y-2 text-sm">
-                                <li><Link href="/#blogs">Blogs</Link></li>
-                                <li><Link href="/#about">About</Link></li>
-                                <li><Link href="/#contact">Contact</Link></li>
-                                <li><Link href="/#testimonials">Testimonials / Proof</Link></li>
-                                <li><Link href="/#why-us">Why work with Synage</Link></li>
-                            </ul>
-                        </div>
+    {/* COMPANY */}
+    <div>
+      <h4 className="font-bold text-lg mb-4">Company</h4>
+      <ul className="space-y-2 text-sm">
+        <li><Link href="/#blogs">Blogs</Link></li>
+        <li><Link href="/#about">About</Link></li>
+        <li><Link href="/#contact">Contact</Link></li>
+        <li><Link href="/#testimonials">Testimonials</Link></li>
+        <li><Link href="/#why-us">Why Synage</Link></li>
+      </ul>
+    </div>
 
-                        {/* SOCIALS */}
-                        <div className="md:col-span-1 space-y-4">
-                            <h4 className="font-bold text-lg">Socials</h4>
-                            <ul className="space-y-2 text-sm">
-                                <li><Link href="#">LinkedIn</Link></li>
-                                <li><Link href="#">Facebook</Link></li>
-                                <li><Link href="#">Instagram</Link></li>
-                            </ul>
-                        </div>
+    {/* SOCIAL */}
+    <div>
+      <h4 className="font-bold text-lg mb-4">Socials</h4>
+      <ul className="space-y-2 text-sm">
+        <li><Link href="#">LinkedIn</Link></li>
+        <li><Link href="#">Facebook</Link></li>
+        <li><Link href="#">Instagram</Link></li>
+      </ul>
+    </div>
 
-                        {/* CONTACT */}
-                        <address className="md:col-span-2 not-italic space-y-4">
-                            <h4 className="font-bold text-lg">Contact Us</h4>
-                            <ul className="space-y-2 text-sm">
-                                <li>+91 98113 12400</li>
-                                <li>+91 98111 76892</li>
-                                <li>
-                                    <Link href="mailto:info@synageconsultants.com">
-                                        info@synageconsultants.com
-                                    </Link>
-                                </li>
-                            </ul>
-                        </address>
+    {/* CONTACT */}
+    <div>
+      <h4 className="font-bold text-lg mb-4">Contact Us</h4>
+      <ul className="space-y-2 text-sm">
+        <li>+91 98113 12400</li>
+        <li>+91 98111 76892</li>
+        <li>
+          <Link href="mailto:info@synageconsultants.com">
+            info@synageconsultants.com
+          </Link>
+        </li>
+      </ul>
+    </div>
 
-                    </div>
+  </div>
+
+</div>
                 </div>
             </section>
 

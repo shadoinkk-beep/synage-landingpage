@@ -238,3 +238,12 @@ body {
 span.country-name {
     color: black;
 }
+
+
+
+
+.react-tel-input .flag-dropdown {
+    background-color: transparent!important;
+    border-width: 0px!important;
+
+}

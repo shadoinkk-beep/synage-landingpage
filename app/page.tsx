@@ -13,7 +13,7 @@ import { Metadata } from "next";
   🔹 Change these anytime
 */
 const pageTitle =
-  "Luxury Real Estate Advisory in Gurgaon & South Delhi | Synage Consultants";
+  "Synage Consultants";
 
 const pageDescription =
   "Synage Consultants offers premium residential and commercial real estate advisory services across Gurgaon and South Delhi. Trusted expertise. Proven results.";
@@ -22,24 +22,33 @@ const pageDescription =
   🔥 SEO Metadata for Homepage
 */
 export const metadata: Metadata = {
-  title: pageTitle, // 🔁 Change title anytime
-  description: pageDescription, // 🔁 Change description anytime
+  title: pageTitle,
+  description: pageDescription,
 
   alternates: {
-    canonical: "/", // 🔁 Change if route changes
+    canonical: "/",
   },
 
   openGraph: {
     title: pageTitle,
     description: pageDescription,
-    url: "/", // 🔁 Change if domain/route changes
+    url: "https://www.synageconsultants.com",
     type: "website",
+    images: [
+      {
+        url: "/HomePage/Hero_BG.png",
+        width: 1200,
+        height: 630,
+        alt: "Synage Consultants",
+      },
+    ],
   },
 
   twitter: {
     card: "summary_large_image",
     title: pageTitle,
     description: pageDescription,
+    images: ["/HomePage/Hero_BG.png"],
   },
 };
 
@@ -49,25 +58,19 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
-      {/* 
-        🔥 Local Business Structured Data
-        Helps with Gurgaon / Delhi NCR ranking
-        🔁 Update if business details change
-      */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "RealEstateAgent",
-
-            name: "Synage Consultants", // 🔁 Change if brand changes
-            url: "https://www.synageconsultants.com", // 🔁 Change if domain changes
+            name: "Synage Consultants",
+            url: "https://www.synageconsultants.com",
 
             areaServed: [
               {
                 "@type": "City",
-                name: "Gurgaon", // 🔁 Add more cities if needed
+                name: "Gurgaon",
               },
               {
                 "@type": "City",
@@ -75,11 +78,11 @@ export default function HomePage() {
               },
             ],
 
-            description: pageDescription, // 🔁 Keep synced with meta description
+            description: pageDescription,
 
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Gurgaon", // 🔁 Update if office location changes
+              addressLocality: "Gurgaon",
               addressRegion: "Haryana",
               addressCountry: "IN",
             },
@@ -87,23 +90,15 @@ export default function HomePage() {
         }}
       />
 
-      {/* 
-        🏠 Landing Page UI Goes Here
-        🔁 Replace with Hero, Services, CTA, etc.
-      */}
       <main>
-        {/* Homepage sections */}
-        {/* Home */}
-        {/* <p className="font-heading"> Stylish Mother </p> */}
-        {/* <p className="font-body"  > Spline Sans </p> */}
-        <HomeHero/>
-        <WhyUs/>
-        <Services/>
-        <AboutLead/>
-        <TrustedFor/>
-        <BlogsHero/>
-        <ContactUs/>
-        <Footer/>
+        <HomeHero />
+        <WhyUs />
+        <Services />
+        <AboutLead />
+        <TrustedFor />
+        <BlogsHero />
+        <ContactUs />
+        <Footer />
       </main>
     </>
   );

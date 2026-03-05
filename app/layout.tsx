@@ -3,6 +3,7 @@ import "./globals.css";
 import { Spline_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/common/Navbar";
+import WhatsappCTA from "@/components/common/WhatsappCTA";
 // import Navbar from "@/components/common/Navbar";
 
 const splineSans = Spline_Sans({
@@ -122,7 +123,7 @@ export default function RootLayout({
       <body>
         
        <Navbar/>
-      
+          <WhatsappCTA/>
       {children}
         
         </body>

@@ -93,12 +93,12 @@ export default function Services() {
               variants={fadeUpItem}
               onClick={() => {
                 setActiveIndex(index);
-                carouselRef.current?.goToSlide(index);
+                carouselRef.current?.goToSlide(index + 2);
               }}
               whileTap={{ scale: 0.95 }}
               className={`px-5 py-2 rounded-full text-sm transition
                 ${
-                  activeIndex === index
+                  activeIndex == index
                     ? "bg-white text-black"
                     : "bg-white/10 text-white hover:bg-white/20"
                 }`}
@@ -115,10 +115,13 @@ export default function Services() {
           showDots
           swipeable
           draggable
-          infinite={false}
+          infinite={true}
           autoPlay={true}
           autoPlaySpeed={2000}
-          afterChange={(_, state) => setActiveIndex(state.currentSlide)}
+          afterChange={(_, state) => {
+            const realIndex = (state.currentSlide - 2 + servicesData.length) % servicesData.length;
+            setActiveIndex(realIndex);
+          }}
           responsive={{
             all: {
               breakpoint: { max: 4000, min: 0 },

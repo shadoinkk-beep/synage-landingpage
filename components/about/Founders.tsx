@@ -47,10 +47,10 @@ export default function Founders() {
                   because the founders stayed relentless about doing the work
                   properly—even when nobody was watching.
                   Dedication shows up in the details. Discipline, calm execution,
-                  structured processes, and clarity are what clients trust for
+                  structured processesand clarity are what clients trust for
                   high-value decisions.
                   The founders turned hard work into Synage’s standard of clarity,
-                  confidentiality, and control.
+                  confidentialityand control.
               </div>
 
             </div>
@@ -94,9 +94,9 @@ export default function Founders() {
 
                     <p className="text-sm leading-relaxed max-w-xl">
                       With a private banking background, Kunal understands that real
-                      value lies in numbers, structure, and discipline. His approach
+                      value lies in numbers, structureand discipline. His approach
                       shaped Synage’s framework around cash flows, pricing discipline,
-                      risk assessment, and long-term wealth alignment—helping clients
+                      risk assessmentand long-term wealth alignment—helping clients
                       avoid costly surprises.
                     </p>
 
@@ -132,7 +132,7 @@ export default function Founders() {
                     <p className="text-sm leading-relaxed max-w-xl">
                       With years of hands-on real estate execution, Ujjwal brings
                       on-ground clarity to Synage’s advisory. His discipline ensures
-                      smoother closures, fewer risks, and sharper decision-making for
+                      smoother closures, fewer risksand sharper decision-making for
                       high-value transactions.
                     </p>
 
@@ -173,7 +173,7 @@ export default function Founders() {
                     <p className="text-sm leading-relaxed max-w-xl">
                       With years of hands-on real estate execution, Ujjwal brings
                       on-ground clarity to Synage’s advisory. His discipline ensures
-                      smoother closures, fewer risks, and sharper decision-making for
+                      smoother closures, fewer risksand sharper decision-making for
                       high-value transactions.
                       <br />
                       <br />

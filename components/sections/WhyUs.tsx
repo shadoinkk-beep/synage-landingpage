@@ -55,7 +55,7 @@ export default function WhyUs() {
 
           <p className="font-body text-sm md:text-base opacity-80 max-w-3xl mx-auto">
             Luxury real estate decisions require more than listings. Synage
-            brings investment execution, discreet representation, and end-to-end
+            brings investment execution, discreet representationand end-to-end
             ownership support across Gurgaon and South Delhi.
           </p>
 
@@ -90,7 +90,7 @@ export default function WhyUs() {
             <p className="font-body text-sm">
               Synage has operated through multiple market cycles with a
               referral-led model. Clients stay because the focus is simple:
-              discreet execution, clear next steps, and consistent follow-through.
+              discreet execution, clear next stepsand consistent follow-through.
             </p>
           </motion.div>
 
@@ -120,7 +120,7 @@ export default function WhyUs() {
             <p className="font-body text-sm">
               Synage has advised and executed for 500+ clients across Gurgaon
               and South Delhi, including HNIs, CXOs, partners in firms,
-              business owners, and NRIs.
+              business ownersand NRIs.
             </p>
           </motion.div>
 

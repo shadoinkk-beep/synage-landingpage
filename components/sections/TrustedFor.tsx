@@ -176,7 +176,7 @@ export default function TrustedFor() {
             className="font-body sm:text-right text-sm md:text-base text-white/70 max-w-md lg:ml-6"
           >
             Synage supports ₹100Cr+ - ₹1000Cr+ decisions in Gurgaon and South Delhi.
-            Clients choose us for real execution, discreet representation, and
+            Clients choose us for real execution, discreet representationand
             end-to-end ownership support that continues after the deal closes.
           </motion.p>
 

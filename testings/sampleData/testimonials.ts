@@ -54,7 +54,7 @@ export const testimonialsData: Testimonial[] = [
     role: "Investor",
     company: "Global Assets Ltd.",
     message:
-      "Transparent, reliable, and result-oriented team.",
+      "Transparent, reliableand result-oriented team.",
     avatar: "/images/sampleclient.png",
     videoUrl: "https://www.youtube.com/watch?v=2L6gsn7rGqI&list=RD2L6gsn7rGqI&start_radio=1",
     thumbnail: "/images/video-thumb2.jpg"

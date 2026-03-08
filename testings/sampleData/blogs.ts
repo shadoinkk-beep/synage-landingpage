@@ -39,7 +39,7 @@ export const blogsData: Blog[] = [
   {
     title: "NRI Guide to Investing in Indian Real Estate",
     description:
-      "Everything NRIs need to know about documentation, compliance, taxation, and property management.",
+      "Everything NRIs need to know about documentation, compliance, taxationand property management.",
     img: "/images/sampleBlog.png",
     url: "/blogs/Top Mistakes to Avoid in Real Estate Investment"
   },
@@ -53,7 +53,7 @@ export const blogsData: Blog[] = [
   {
     title: "How Smart Homes Are Changing Luxury Living",
     description:
-      "Discover how automation, AI security, and sustainable tech are redefining premium housing experiences.",
+      "Discover how automation, AI securityand sustainable tech are redefining premium housing experiences.",
     img: "/images/sampleBlog.png",
     url: "/blogs/Top Mistakes to Avoid in Real Estate Investment"
   },

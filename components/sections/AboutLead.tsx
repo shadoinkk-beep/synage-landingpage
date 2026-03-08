@@ -40,7 +40,7 @@ export default function AboutLead() {
           >
 
             {/* MAIN HEADING */}
-            <motion.h1
+            <motion.h2
               className="text-3xl md:text-4xl leading-tight font-medium"
               variants={{
                 hidden: { opacity: 0, y: 40 },
@@ -50,8 +50,8 @@ export default function AboutLead() {
             >
               Built on long-term trust and execution, Synage Consultants supports
               HNIs and NRIs across luxury real estate in Gurgaon and South Delhi
-              with discretion, clarity, and Luxury Investment Approach.
-            </motion.h1>
+              with discretion, clarityand Luxury Investment Approach.
+            </motion.h2>
 
             {/* DESCRIPTION */}
             <motion.p

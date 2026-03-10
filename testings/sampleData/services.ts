@@ -31,7 +31,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/portfolio-management/performance-reviews.jpg",
         tags: ["Yield tracking", "Benchmark insights", "Action-ready reports"],
         description:
-          "We deliver structured portfolio reviews with yield tracking, appreciation analysis and benchmark comparisons, so you can make clear hold, rotate, or exit decisions with confidence."
+          "We deliver structured portfolio reviews with yield tracking, appreciation analysis and benchmark comparisons, so you can make clear hold, rotate or exit decisions with confidence."
       },
       {
         id: 3,

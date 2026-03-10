@@ -117,7 +117,7 @@ export default function Services() {
           draggable
           infinite={true}
           autoPlay={true}
-          autoPlaySpeed={2000}
+          autoPlaySpeed={7000}
           afterChange={(_, state) => {
             const realIndex = (state.currentSlide - 2 + servicesData.length) % servicesData.length;
             setActiveIndex(realIndex);

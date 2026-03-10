@@ -92,14 +92,14 @@ export default function Footer() {
             {/* BOTTOM BAR */}
 
             {/* BOTTOM BAR */}
-            <section className="bg-dark">
+            <section className="bg-dark ">
                 <div className="w-full px-6">
-                    <div className="h-14 flex items-center justify-between text-xs text-white">
+                    <div className="h-14 grid sm:flex items-center justify-start sm:gap-6 text-xs text-white">
                         <p>
                             © 2026 Synage Consultants Pvt. Ltd. All rights reserved.
                         </p>
 
-                        <div className="flex gap-4 text-base">
+                        <div className="flex gap-4 text-base ">
                             <Link target="_blank" href="https://www.linkedin.com/company/synageconsultants/" aria-label="LinkedIn"><FaLinkedin /></Link>
                             <Link href="#" aria-label="Facebook"><FaFacebook /></Link>
                             <Link target="_blank" href="https://www.instagram.com/synage_consultants/" aria-label="Instagram"><FaInstagram /></Link>

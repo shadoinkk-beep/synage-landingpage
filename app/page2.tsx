@@ -9,7 +9,7 @@ const pageTitle =
   "Synage Consultants | Luxury Real Estate Advisory in Delhi NCR";
 
 const pageDescription =
-  "Synage Consultants is enhancing its digital presence. We continue to offer bespoke residential and commercial real estate advisory services across Gurgaon and South Delhi.";
+  "Synage Consultants is enhancing its digital presence. We continue to offer bespoke residential  andcommercial real estate advisory services across Gurgaon  andSouth Delhi.";
 
 /*
   ✅ SEO Metadata (Keep index TRUE while live)

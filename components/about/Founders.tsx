@@ -47,10 +47,10 @@ export default function Founders() {
                   because the founders stayed relentless about doing the work
                   properly—even when nobody was watching.
                   Dedication shows up in the details. Discipline, calm execution,
-                  structured processes, and clarity are what clients trust for
+                  structured processes and clarity are what clients trust for
                   high-value decisions.
                   The founders turned hard work into Synage’s standard of clarity,
-                  confidentiality, and control.
+                  confidentiality and control.
               </div>
 
             </div>
@@ -75,7 +75,7 @@ export default function Founders() {
                   <div className="md:col-span-6 relative h-72 sm:h-[80vh]">
                     <Image
                       src={Kunal_Milwani}
-                      alt="Kunal Milwani"
+                      alt="Kunaall Milwani"
                       fill
                       className="object-cover"
                       placeholder="blur"
@@ -85,7 +85,7 @@ export default function Founders() {
                   {/* CONTENT */}
                   <div className="md:col-span-6 px-6 py-6 sm:p-12 flex flex-col justify-center space-y-4">
                     <h3 className="font-body font-bold text-3xl sm:text-6xl">
-                      Kunal Milwani
+                      Kunaall Milwani
                     </h3>
 
                     <p className="text:xl sm:text-2xl font-body">
@@ -94,20 +94,20 @@ export default function Founders() {
 
                     <p className="text-sm leading-relaxed max-w-xl">
                       With a private banking background, Kunal understands that real
-                      value lies in numbers, structure, and discipline. His approach
+                      value lies in numbers, structure and discipline. His approach
                       shaped Synage’s framework around cash flows, pricing discipline,
-                      risk assessment, and long-term wealth alignment—helping clients
+                      risk assessment and long-term wealth alignment—helping clients
                       avoid costly surprises.
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/kunalmilwani/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>
@@ -132,18 +132,18 @@ export default function Founders() {
                     <p className="text-sm leading-relaxed max-w-xl">
                       With years of hands-on real estate execution, Ujjwal brings
                       on-ground clarity to Synage’s advisory. His discipline ensures
-                      smoother closures, fewer risks, and sharper decision-making for
+                      smoother closures, fewer risks and sharper decision-making for
                       high-value transactions.
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/ujjwalsethi-synage/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>
@@ -173,7 +173,7 @@ export default function Founders() {
                     <p className="text-sm leading-relaxed max-w-xl">
                       With years of hands-on real estate execution, Ujjwal brings
                       on-ground clarity to Synage’s advisory. His discipline ensures
-                      smoother closures, fewer risks, and sharper decision-making for
+                      smoother closures, fewer risks and sharper decision-making for
                       high-value transactions.
                       <br />
                       <br />
@@ -181,13 +181,13 @@ export default function Founders() {
                     </p>
 
                     <div className="flex gap-4 text-lg pt-4">
-                      <a href="https://www.linkedin.com" target="_blank">
+                      <a href="https://www.linkedin.com/in/kunalmilwani/" target="_blank">
                         <FaLinkedin />
                       </a>
                       <a href="https://www.facebook.com" target="_blank">
                         <FaFacebook />
                       </a>
-                      <a href="https://www.instagram.com" target="_blank">
+                      <a href="https://www.instagram.com/synage_consultants/" target="_blank">
                         <FaInstagram />
                       </a>
                     </div>

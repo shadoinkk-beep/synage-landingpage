@@ -1,3 +1,6 @@
+import BlogList from "@/components/blogs/BlogList";
+import RecentPosts from "@/components/blogs/RecentPosts";
+import Footer from "@/components/common/Footer";
 import { Metadata } from "next";
 
 /*
@@ -7,7 +10,7 @@ const pageTitle =
   "Real Estate Blog | Gurgaon Property Insights & Investment Guides";
 
 const pageDescription =
-  "Explore expert insights, market trends, and investment guides for Gurgaon and Delhi NCR real estate by Synage Consultants.";
+  "Explore expert insights, market trends and investment guides for Gurgaon and Delhi NCR real estate by Synage Consultants.";
 
 /*
   🔥 Static SEO Metadata for Blog Landing Page
@@ -71,10 +74,9 @@ export default function BlogsLandingPage() {
         📝 Blog listing UI goes here
         🔁 Replace with your blog grid component later
       */}
-      <div>
-        {/* Blog list component */}
-        Blogs
-      </div>
+      {/* <RecentPosts/> */}
+      <BlogList/>
+      <Footer/>
     </>
   );
 }

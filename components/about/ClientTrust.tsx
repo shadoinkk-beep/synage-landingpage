@@ -68,16 +68,17 @@ export default function ClientTrust() {
         >
 
           {/* ================= FULL WIDTH HEADING ================= */}
-          <motion.div variants={fadeUp}>
+          <motion.h1 variants={fadeUp}>
             <Textfit
               mode="single"
               className="font-heading"
               max={200}
               style={{ width: "100%" }}
+              
             >
               Built On Client&apos;s Trust
             </Textfit>
-          </motion.div>
+          </motion.h1>
 
           {/* ================= CONTENT GRID ================= */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start max-w-full">
@@ -87,17 +88,17 @@ export default function ClientTrust() {
               className="lg:col-span-6 space-y-6 max-w-full"
               variants={slideLeft}
             >
-              <p className="text-sm md:text-base leading-relaxed max-w-xl">
-                Synage Consultants is built on long-term client relationships and a
+              <p className="text-sm md:text-base leading-relaxed max-w-xl text-center sm:text-left">
+                Synage Consultants is built on long-term client relationships  and a
                 referral-led reputation earned since 2009. We work with HNIs,
-                CXOs, business owners, and NRIs across Gurgaon and South Delhi,
-                supporting luxury condos, villas, farmhouses, and pre-rented
+                CXOs, business owners and NRIs across Gurgaon  and South Delhi,
+                supporting luxury condos, villas, farmhouses and pre-rented
                 assets in the ₹10Cr – ₹100Cr bracket.
                 <br /><br />
                 Our focus is simple: execute with discretion, coordinate the
-                details that protect a deal, and stay accountable through the
+                details that protect a deal and stay accountable through the
                 full ownership cycle—from transaction and paperwork to
-                possession, leasing, and ongoing management.
+                possession, leasing and ongoing management.
               </p>
 
               <motion.div

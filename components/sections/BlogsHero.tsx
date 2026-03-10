@@ -5,7 +5,15 @@ import Image from "next/image";
 import Link from "next/link";
 import useEmblaCarousel from "embla-carousel-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { blogsData } from "@/testings/sampleData/blogs";
+import {
+  collection,
+  getDocs,
+  query,
+  orderBy,
+  limit,
+  where,
+} from "firebase/firestore";
+import { db } from "@/lib/firebaseconfig";
 import ArrowSlideButton from "@/components/common/ArrowSlideButton";
 import Arrow from "../common/Arrow";
 
@@ -26,7 +34,8 @@ const fadeUp = {
 };
 
 export default function BlogsHero() {
-  const total = blogsData.length;
+  const [blogsData, setBlogsData] = useState<any[]>([]);
+  const [loading, setLoading] = useState(true);
 
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
@@ -35,6 +44,45 @@ export default function BlogsHero() {
   });
 
   const [index, setIndex] = useState(0);
+
+  /* ---------------- FETCH BLOGS ---------------- */
+
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const q = query(
+          collection(db, "posts"),
+          where("status", "==", "active"),
+          orderBy("createdAt", "desc"),
+          limit(6)
+        );
+
+        const snapshot = await getDocs(q);
+
+        const fetched = snapshot.docs.map((doc) => {
+          const data = doc.data();
+          return {
+            id: doc.id,
+            title: data.heading,
+            img: data.coverImage,
+            description:
+              data.content?.replace(/<[^>]+>/g, "").slice(0, 120) + "...",
+            url: `/blogs/${doc.id}`,
+          };
+        });
+
+        setBlogsData(fetched);
+      } catch (error) {
+        console.error("Error fetching blogs:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBlogs();
+  }, []);
+
+  const total = blogsData.length;
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
@@ -80,7 +128,7 @@ export default function BlogsHero() {
               and NRI ownership across Gurgaon and South Delhi.
             </p>
 
-            <ArrowSlideButton text="View All Blogs" link="/#blogs" />
+            <ArrowSlideButton text="View All Blogs" link="/blogs" />
           </motion.div>
         </div>
 
@@ -89,8 +137,7 @@ export default function BlogsHero() {
 
           {/* LEFT SIDE */}
           <div className="flex sm:flex-col justify-between h-32 sm:h-105">
-            
-            {/* Counter Animation */}
+
             <div className="flex items-baseline gap-2 translate-y-px overflow-hidden">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -110,26 +157,25 @@ export default function BlogsHero() {
               </span>
             </div>
 
-            {/* Arrows */}
-            <div className="flex gap-6">
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={prev}
-                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition"
-              >
-                <Arrow className="rotate-180" />
-              </motion.button>
+<div className="flex gap-6">
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={prev}
+    className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black hover:border-none flex items-center justify-center  transition"
+  >
+    <Arrow className="rotate-180 text-black" />
+  </motion.button>
 
-              <motion.button
-                whileHover={{ scale: 1.08 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={next}
-                className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black flex items-center justify-center hover:bg-black hover:text-white transition"
-              >
-                <Arrow />
-              </motion.button>
-            </div>
+  <motion.button
+    whileHover={{ scale: 1.08 }}
+    whileTap={{ scale: 0.95 }}
+    onClick={next}
+    className="w-20 h-20 p-4 cursor-pointer rounded-full border-2 border-black hover:border-none flex items-center justify-center  transition"
+  >
+    <Arrow className="text-black" />
+  </motion.button>
+</div>
           </div>
 
           {/* ================= CAROUSEL ================= */}
@@ -137,7 +183,7 @@ export default function BlogsHero() {
             <div className="flex">
               {blogsData.map((blog, i) => (
                 <div
-                  key={i}
+                  key={blog.id || i}
                   className="min-w-[100%] md:min-w-[50%] flex"
                 >
                   <div className="w-full px-2 sm:pl-6">

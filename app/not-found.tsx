@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import ArrowDownButton from "@/components/common/ArrowDownButton";
 
 /*
   ✅ Important:
@@ -37,20 +38,7 @@ export default function NotFound() {
         </p>
 
         {/* CTA Button */}
-        <div className="mt-10">
-          <Link
-            href="/"
-            className="group inline-flex items-center gap-4 bg-white text-black px-8 py-4 rounded-full hover:bg-gray-200 transition-all duration-300"
-          >
-            <span className="text-sm font-medium tracking-wide">
-              Return to Homepage
-            </span>
-
-            <span className="flex items-center justify-center w-8 h-8 bg-black text-white rounded-full transition-transform duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </Link>
-        </div>
+        <ArrowDownButton link="/" text="Return to Homepage" />
 
         {/* Footer */}
         <p className="mt-12 text-xs text-gray-600">

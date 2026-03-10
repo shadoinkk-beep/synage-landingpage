@@ -6,6 +6,9 @@ import Marquee from "react-fast-marquee";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import HeroBg from "@/public/HomePage/Hero_BG.png";
+import HeroPhoneBg from "@/public/HomePage/HeroPhone.jpeg";
+import HeroTabBg from "@/public/HomePage/HeroTab.jpeg";
+
 
 export default function HomeHero() {
     const [isMobile, setIsMobile] = useState(false);
@@ -20,15 +23,34 @@ export default function HomeHero() {
     return (
         <section className="relative overflow-hidden text-white bg-[#0b0b0b]">
 
-            <Image
-                src={HeroBg}
-                alt="Luxury real estate models in Gurgaon and South Delhi"
-                fill
-                className="object-cover"
-                placeholder="blur"
-            />
+{/* Desktop */}
+<Image
+  src={HeroBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover hidden lg:block"
+/>
 
-            <div className="absolute inset-0 bg-black/60 sm:hidden" />
+{/* Tablet */}
+<Image
+  src={HeroTabBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover hidden sm:block lg:hidden"
+/>
+
+{/* Mobile */}
+<Image
+  src={HeroPhoneBg}
+  alt="Luxury real estate models in Gurgaon and South Delhi"
+  fill
+  priority
+  className="object-cover block sm:hidden"
+/>
+
+            <div className="absolute inset-0 bg-black/20 sm:hidden" />
 
             <div className="relative z-10 flex min-h-screen flex-col section-content py-0!">
 
@@ -52,7 +74,7 @@ export default function HomeHero() {
                             <path d="M80.6686 2.66663C80.6686 1.19387 79.4747 -4.07696e-05 78.002 -4.07696e-05C76.5292 -4.07696e-05 75.3353 1.19387 75.3353 2.66663C75.3353 4.13939 76.5292 5.33329 78.002 5.33329C79.4747 5.33329 80.6686 4.13939 80.6686 2.66663ZM78.002 2.66663V2.16663L0.000350952 2.16663V2.66663V3.16663L78.002 3.16663V2.66663Z" fill="#B8D779"/>
                         </svg>
 
-                        Investment Advisory, Property & Portfolio Management
+                        Investment Advisory, Real Estate & Portfolio Management
 
                         {/* RIGHT SVG */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="6" viewBox="0 0 81 6" fill="none">
@@ -84,7 +106,7 @@ export default function HomeHero() {
 
                         {/* Description */}
                         <motion.p
-                            className="sm:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-justify leading-relaxed"
+                            className="md:absolute grid bottom-24 sm:left-6 lg:left-8 max-w-md text-sm md:text-base text-white/80 text-center sm:text-justify leading-relaxed"
                             initial={{
                                 opacity: 0,
                                 y: isMobile ? 60 : 0,
@@ -97,14 +119,14 @@ export default function HomeHero() {
                                 ease: [0.22, 1, 0.36, 1] // luxury easing
                             }}
                         >
-                            Synage helps HNIs and NRIs buy, sell, lease, and manage premium assets
-                            across condos, villas, farmhouses, and pre-rented properties with a
-                            resale-first approach and end-to-end ownership support.
+                            Synage helps HNIs and NRIs buy, sell, lease and manage premium assets
+                            across condos, villas, farmhouses and pre-rented properties with a
+                            client-first approach and end-to-end ownership support.
                         </motion.p>
 
                         {/* CTA */}
                         <motion.div
-                            className="sm:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col gap-3 pointer-events-auto"
+                            className="md:absolute bottom-24 sm:right-6 lg:right-8 z-20 flex flex-col gap-3 pointer-events-auto"
                             initial={{
                                 opacity: 0,
                                 y: isMobile ? 60 : 0,
@@ -138,7 +160,7 @@ export default function HomeHero() {
                     transition={{ delay: 2 }}
                 >
                     <Marquee
-                        className="sm:bg-black text-black text-2xl py-1 flex-1 sm:flex-none"
+                        className=" text-black text-2xl py-1 flex-1 sm:flex-none"
                         autoFill
                     >
                         {companeis.map((item, index) => (

@@ -76,7 +76,7 @@ export default function Services() {
             className="font-body sm:text-right text-sm md:text-base text-white/70 max-w-md lg:ml-6"
           >
             Synage supports ₹10Cr–₹500Cr decisions in Gurgaon and South Delhi.
-            Luxury investment execution, end-to-end ownership support, and
+            Luxury investment execution, end-to-end ownership support and
             discreet representation for HNIs and NRIs.
           </motion.p>
 
@@ -93,12 +93,12 @@ export default function Services() {
               variants={fadeUpItem}
               onClick={() => {
                 setActiveIndex(index);
-                carouselRef.current?.goToSlide(index);
+                carouselRef.current?.goToSlide(index + 2);
               }}
               whileTap={{ scale: 0.95 }}
               className={`px-5 py-2 rounded-full text-sm transition
                 ${
-                  activeIndex === index
+                  activeIndex == index
                     ? "bg-white text-black"
                     : "bg-white/10 text-white hover:bg-white/20"
                 }`}
@@ -115,8 +115,13 @@ export default function Services() {
           showDots
           swipeable
           draggable
-          infinite={false}
-          afterChange={(_, state) => setActiveIndex(state.currentSlide)}
+          infinite={true}
+          autoPlay={true}
+          autoPlaySpeed={7000}
+          afterChange={(_, state) => {
+            const realIndex = (state.currentSlide - 2 + servicesData.length) % servicesData.length;
+            setActiveIndex(realIndex);
+          }}
           responsive={{
             all: {
               breakpoint: { max: 4000, min: 0 },

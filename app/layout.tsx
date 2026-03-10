@@ -3,6 +3,7 @@ import "./globals.css";
 import { Spline_Sans } from "next/font/google";
 import localFont from "next/font/local";
 import Navbar from "@/components/common/Navbar";
+import WhatsappCTA from "@/components/common/WhatsappCTA";
 // import Navbar from "@/components/common/Navbar";
 
 const splineSans = Spline_Sans({
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     title:
       "Synage Consultants | Real Estate Advisory Delhi NCR",
     description:
-      "Expert guidance for buying, selling and leasing premium real estate in Gurgaon & South Delhi.",
+      "Expert guidance for buying, selling  andleasing premium real estate in Gurgaon & South Delhi.",
   },
 
   category: "Real Estate",
@@ -113,7 +114,7 @@ export default function RootLayout({
                 addressCountry: "IN",
               },
               description:
-                "Luxury residential and commercial real estate advisory firm in Delhi NCR.",
+                "Luxury residential  andcommercial real estate advisory firm in Delhi NCR.",
             }),
           }}
         />
@@ -122,7 +123,7 @@ export default function RootLayout({
       <body>
         
        <Navbar/>
-      
+          <WhatsappCTA/>
       {children}
         
         </body>

@@ -91,12 +91,12 @@ export default function ClientTrust() {
               <p className="text-sm md:text-base leading-relaxed max-w-xl text-center sm:text-left">
                 Synage Consultants is built on long-term client relationships  and a
                 referral-led reputation earned since 2009. We work with HNIs,
-                CXOs, business ownersand NRIs across Gurgaon  and South Delhi,
-                supporting luxury condos, villas, farmhousesand pre-rented
+                CXOs, business owners and NRIs across Gurgaon  and South Delhi,
+                supporting luxury condos, villas, farmhouses and pre-rented
                 assets in the ₹10Cr – ₹100Cr bracket.
                 <br /><br />
                 Our focus is simple: execute with discretion, coordinate the
-                details that protect a dealand stay accountable through the
+                details that protect a deal and stay accountable through the
                 full ownership cycle—from transaction and paperwork to
                 possession, leasing and ongoing management.
               </p>

@@ -120,7 +120,7 @@ export default function HomeHero() {
                             }}
                         >
                             Synage helps HNIs and NRIs buy, sell, lease and manage premium assets
-                            across condos, villas, farmhousesand pre-rented properties with a
+                            across condos, villas, farmhouses and pre-rented properties with a
                             client-first approach and end-to-end ownership support.
                         </motion.p>
 

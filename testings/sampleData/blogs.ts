@@ -53,7 +53,7 @@ export const blogsData: Blog[] = [
   {
     title: "How Smart Homes Are Changing Luxury Living",
     description:
-      "Discover how automation, AI securityand sustainable tech are redefining premium housing experiences.",
+      "Discover how automation, AI security and sustainable tech are redefining premium housing experiences.",
     img: "/images/sampleBlog.png",
     url: "/blogs/Top Mistakes to Avoid in Real Estate Investment"
   },

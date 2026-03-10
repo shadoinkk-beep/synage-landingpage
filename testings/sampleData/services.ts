@@ -23,7 +23,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/portfolio-management/portfolio-allocation.jpg",
         tags: ["Micro-market mapping", "Risk-balanced mix", "Liquidity planning"],
         description:
-          "We curate and rebalance real estate portfolios aligned with your wealth objectives, liquidity preferencesand risk profile. Our decisions are driven by micro-market strength and forward demand cycles to keep capital positioned where it performs."
+          "We curate and rebalance real estate portfolios aligned with your wealth objectives, liquidity preferences and risk profile. Our decisions are driven by micro-market strength and forward demand cycles to keep capital positioned where it performs."
       },
       {
         id: 2,
@@ -31,7 +31,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/portfolio-management/performance-reviews.jpg",
         tags: ["Yield tracking", "Benchmark insights", "Action-ready reports"],
         description:
-          "We deliver structured portfolio reviews with yield tracking, appreciation analysisand benchmark comparisons, so you can make clear hold, rotate, or exit decisions with confidence."
+          "We deliver structured portfolio reviews with yield tracking, appreciation analysis and benchmark comparisons, so you can make clear hold, rotate, or exit decisions with confidence."
       },
       {
         id: 3,
@@ -39,7 +39,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/portfolio-management/exit-planning.jpg",
         tags: ["Timing strategy", "Value unlock", "Capital rotation"],
         description:
-          "Markets shift. Portfolios must adapt. We identify underperforming holdings, recommend capital rotationand structure strategic exits to strengthen long-term portfolio resilience and returns."
+          "Markets shift. Portfolios must adapt. We identify underperforming holdings, recommend capital rotation and structure strategic exits to strengthen long-term portfolio resilience and returns."
       }
     ]
   },
@@ -53,7 +53,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/hni-and-nri-support/documentation-compliance.jpg",
         tags: ["Clear paperwork", "Compliance checks", "Risk reduction"],
         description:
-          "We manage documentation workflows, regulatory coordination, tax alignmentand due diligence, reducing risk and bringing clarity at every stage."
+          "We manage documentation workflows, regulatory coordination, tax alignment and due diligence, reducing risk and bringing clarity at every stage."
       },
       {
         id: 5,
@@ -61,7 +61,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/hni-and-nri-support/remote-ownership.jpg",
         tags: ["On-ground coordination", "Inspection oversight", "Handover support"],
         description:
-          "We act as your on-ground representative for inspections, handovers, developer coordinationand documentation follow-ups, ensuring control without being physically present."
+          "We act as your on-ground representative for inspections, handovers, developer coordination and documentation follow-ups, ensuring control without being physically present."
       },
       {
         id: 6,
@@ -83,7 +83,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/investment-management/deal-sourcing.jpg",
         tags: ["Verified opportunities", "Corridor intelligence", "Entry positioning"],
         description:
-          "We identify high-potential opportunities backed by infrastructure triggers, demand-supply patternsand location fundamentals, with disciplined entry positioning."
+          "We identify high-potential opportunities backed by infrastructure triggers, demand-supply patterns and location fundamentals, with disciplined entry positioning."
       },
       {
         id: 8,
@@ -91,7 +91,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/investment-management/risk-due-diligence.jpg",
         tags: ["Legal verification", "Developer assessment", "Pricing validation"],
         description:
-          "We evaluate legal standing, developer credibility, pricing benchmarksand financial feasibility, eliminating blind spots before capital is committed."
+          "We evaluate legal standing, developer credibility, pricing benchmarks and financial feasibility, eliminating blind spots before capital is committed."
       },
       {
         id: 9,
@@ -99,7 +99,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/investment-management/yield-growth.jpg",
         tags: ["Lease-led returns", "Hold period advice", "Exit optimization"],
         description:
-          "Beyond acquisition, we advise on leasing alignment, holding periodsand exits to improve yield consistency and long-term capital growth."
+          "Beyond acquisition, we advise on leasing alignment, holding periods and exits to improve yield consistency and long-term capital growth."
       }
     ]
   },
@@ -151,7 +151,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/transactions-management/closing-coordination.jpg",
         tags: ["Document control", "Timeline discipline", "Registration support"],
         description:
-          "We coordinate legal review, compliance checks, financial flowand registration, delivering a time-bound, seamless closing."
+          "We coordinate legal review, compliance checks, financial flow and registration, delivering a time-bound, seamless closing."
       },
       {
         id: 15,
@@ -160,7 +160,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/portfolio-management/exit-planning.jpg",
         tags: ["Buyer targeting", "Pricing strategy", "Smooth exits"],
         description:
-          "We structure divestments to maximize value realization by aligning timing, market appetiteand pricing strategy."
+          "We structure divestments to maximize value realization by aligning timing, market appetite and pricing strategy."
       }
     ]
   }

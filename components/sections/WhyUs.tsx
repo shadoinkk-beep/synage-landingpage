@@ -90,7 +90,7 @@ export default function WhyUs() {
             <p className="font-body text-sm">
               Synage has operated through multiple market cycles with a
               referral-led model. Clients stay because the focus is simple:
-              discreet execution, clear next stepsand consistent follow-through.
+              discreet execution, clear next steps and consistent follow-through.
             </p>
           </motion.div>
 

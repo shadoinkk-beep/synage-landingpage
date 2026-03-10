@@ -10,7 +10,7 @@ const pageTitle =
   "Real Estate Blog | Gurgaon Property Insights & Investment Guides";
 
 const pageDescription =
-  "Explore expert insights, market trendsand investment guides for Gurgaon and Delhi NCR real estate by Synage Consultants.";
+  "Explore expert insights, market trends and investment guides for Gurgaon and Delhi NCR real estate by Synage Consultants.";
 
 /*
   🔥 Static SEO Metadata for Blog Landing Page

@@ -55,7 +55,7 @@ export default function WhyUs() {
 
           <p className="font-body text-sm md:text-base opacity-80 max-w-3xl mx-auto">
             Luxury real estate decisions require more than listings. Synage
-            brings investment execution, discreet representationand end-to-end
+            brings investment execution, discreet representation and end-to-end
             ownership support across Gurgaon and South Delhi.
           </p>
 

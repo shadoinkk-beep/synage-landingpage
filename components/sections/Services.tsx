@@ -76,7 +76,7 @@ export default function Services() {
             className="font-body sm:text-right text-sm md:text-base text-white/70 max-w-md lg:ml-6"
           >
             Synage supports ₹10Cr–₹500Cr decisions in Gurgaon and South Delhi.
-            Luxury investment execution, end-to-end ownership supportand
+            Luxury investment execution, end-to-end ownership support and
             discreet representation for HNIs and NRIs.
           </motion.p>
 

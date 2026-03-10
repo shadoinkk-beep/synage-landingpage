@@ -16,7 +16,7 @@ const pageTitle =
   "Synage Consultants";
 
 const pageDescription =
-  "Synage Consultants offers premium residential and commercial real estate advisory services across Gurgaon and South Delhi. Trusted expertise. Proven results.";
+  "Synage Consultants offers premium residential  andcommercial real estate advisory services across Gurgaon  andSouth Delhi. Trusted expertise. Proven results.";
 
 /*
   🔥 SEO Metadata for Homepage

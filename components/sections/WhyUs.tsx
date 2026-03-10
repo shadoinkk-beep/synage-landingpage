@@ -120,7 +120,7 @@ export default function WhyUs() {
             <p className="font-body text-sm">
               Synage has advised and executed for 500+ clients across Gurgaon
               and South Delhi, including HNIs, CXOs, partners in firms,
-              business ownersand NRIs.
+              business owners and NRIs.
             </p>
           </motion.div>
 

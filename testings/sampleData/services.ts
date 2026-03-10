@@ -113,7 +113,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/leasing-management/tenant-placement.jpg",
         tags: ["Quality tenants", "Strong screening", "Vacancy control"],
         description:
-          "We source and screen quality tenants with a focus on stability, credibilityand long-term occupancy."
+          "We source and screen quality tenants with a focus on stability, credibility and long-term occupancy."
       },
       {
         id: 11,
@@ -121,7 +121,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/leasing-management/lease-negotiation.jpg",
         tags: ["Owner-first terms", "Clear clauses", "Dispute prevention"],
         description:
-          "We structure and negotiate lease terms that protect owner interests, reduce disputesand maintain clarity for both sides."
+          "We structure and negotiate lease terms that protect owner interests, reduce disputes and maintain clarity for both sides."
       },
       {
         id: 12,
@@ -129,7 +129,7 @@ export const servicesData: ServiceTypeGroup[] = [
         image: "/services/leasing-management/renewal-management.jpg",
         tags: ["Renewal planning", "Escalation management", "Tenant continuity"],
         description:
-          "We manage renewals, escalationsand tenant coordination to reduce vacancy cycles and protect consistent cashflows."
+          "We manage renewals, escalations and tenant coordination to reduce vacancy cycles and protect consistent cashflows."
       }
     ]
   },

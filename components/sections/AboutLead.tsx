@@ -50,7 +50,7 @@ export default function AboutLead() {
             >
               Built on long-term trust and execution, Synage Consultants supports
               HNIs and NRIs across luxury real estate in Gurgaon and South Delhi
-              with discretion, clarityand Luxury Investment Approach.
+              with discretion, clarity and client centric Approach.
             </motion.h2>
 
             {/* DESCRIPTION */}

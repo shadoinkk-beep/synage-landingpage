@@ -74,7 +74,7 @@ export default function HomeHero() {
                             <path d="M80.6686 2.66663C80.6686 1.19387 79.4747 -4.07696e-05 78.002 -4.07696e-05C76.5292 -4.07696e-05 75.3353 1.19387 75.3353 2.66663C75.3353 4.13939 76.5292 5.33329 78.002 5.33329C79.4747 5.33329 80.6686 4.13939 80.6686 2.66663ZM78.002 2.66663V2.16663L0.000350952 2.16663V2.66663V3.16663L78.002 3.16663V2.66663Z" fill="#B8D779"/>
                         </svg>
 
-                        Investment Advisory, Property & Portfolio Management
+                        Investment Advisory, Real Estate & Portfolio Management
 
                         {/* RIGHT SVG */}
                         <svg xmlns="http://www.w3.org/2000/svg" width="81" height="6" viewBox="0 0 81 6" fill="none">
@@ -119,9 +119,9 @@ export default function HomeHero() {
                                 ease: [0.22, 1, 0.36, 1] // luxury easing
                             }}
                         >
-                            Synage helps HNIs and NRIs buy, sell, leaseand manage premium assets
+                            Synage helps HNIs and NRIs buy, sell, lease and manage premium assets
                             across condos, villas, farmhousesand pre-rented properties with a
-                            resale-first approach and end-to-end ownership support.
+                            client-first approach and end-to-end ownership support.
                         </motion.p>
 
                         {/* CTA */}

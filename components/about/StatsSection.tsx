@@ -54,7 +54,7 @@ export default function StatsSection() {
       <div ref={triggerRef} />
 
       <div className="section-content space-y-16">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* CARD 1 */}
           <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
@@ -78,7 +78,7 @@ export default function StatsSection() {
               <CountUp
                 key={`value-${triggerCount}`}
                 start={0}
-                end={2000}
+                end={1000}
                 duration={2.8}
                 separator=","
                 easingFn={easeOutCubic}
@@ -104,7 +104,7 @@ export default function StatsSection() {
           </div>
 
           {/* CARD 4 */}
-          <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
+          {/* <div className="rounded-2xl bg-[#FBF7F0] text-[#02131B] p-6 shadow-sm border border-black py-12">
             <h3 className="text-4xl font-semibold">
               <CountUp
                 key={`mandates-${triggerCount}`}
@@ -116,7 +116,7 @@ export default function StatsSection() {
               +
             </h3>
             <p className="text-lg mt-2">Fortune 500 Mandates</p>
-          </div>
+          </div> */}
 
         </div>
       </div>

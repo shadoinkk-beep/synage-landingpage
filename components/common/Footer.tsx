@@ -36,14 +36,14 @@ export default function Footer() {
     {/* SERVICES */}
     <div>
       <h4 className="font-bold text-lg mb-4">Services</h4>
-      <ul className="space-y-2 text-sm">
-        <li><Link href="/#services">Luxury Villas</Link></li>
-        <li><Link href="/#services">Luxury Condos</Link></li>
-        <li><Link href="/#services">Portfolio Management</Link></li>
-        <li><Link href="/#services">NRI End-to-End Execution</Link></li>
-        <li><Link href="/#services">Luxury Investment Advisory</Link></li>
-        <li><Link href="/#services">Luxury Transaction Advisory</Link></li>
-        <li><Link href="/#services">Leasing & Property Management</Link></li>
+      <ul className="space-y-2 text-sm ">
+        <li><Link className="cursor-default!" href="/#services">Luxury Villas</Link></li>
+        <li><Link className="cursor-default!"  href="/#services">Luxury Condos</Link></li>
+        <li><Link className="cursor-default!" href="/#services">Portfolio Management</Link></li>
+        <li><Link className="cursor-default!" href="/#services">NRI End-to-End Execution</Link></li>
+        <li><Link className="cursor-default!" href="/#services">Luxury Investment Advisory</Link></li>
+        <li><Link className="cursor-default!" href="/#services">Luxury Transaction Advisory</Link></li>
+        <li><Link className="cursor-default!" href="/#services">Leasing & Property Management</Link></li>
       </ul>
     </div>
 

@@ -44,7 +44,7 @@ export const GetExpertExecution = () => {
               transition={{ duration: 0.7, ease: "easeOut" }}
             >
               If you&apos;re an HNI, NRI, corporate or expat navigating buying,
-              selling, leasing, or managing luxury property in Gurgaon or South
+              selling, leasing or managing luxury property in Gurgaon or South
               Delhi, speak with Synage. We bring experience, discretionand
               end-to-end ownership support to handle it properly.
             </motion.p>

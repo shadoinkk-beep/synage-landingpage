@@ -28,24 +28,37 @@ export async function generateMetadata({ params }: Props) {
     .trim()
     .slice(0, 160) + "...";
 
+  const siteUrl = "https://www.synageconsultants.com";
+  const absoluteUrl = `${siteUrl}/blogs/${titleParam}`;
+  const absoluteImageUrl = post.coverImage
+    ? post.coverImage.startsWith("http")
+      ? post.coverImage
+      : `${siteUrl}${post.coverImage}`
+    : undefined;
+
   return {
     title: post.heading,
     description: excerpt,
     alternates: {
-      canonical: `/blogs/${titleParam}`,
+      canonical: absoluteUrl,
     },
     openGraph: {
       title: post.heading,
       description: excerpt,
-      url: `/blogs/${titleParam}`,
+      url: absoluteUrl,
+      siteName: "Synage Consultants",
       type: "article",
-      images: post.coverImage
+      images: absoluteImageUrl
         ? [
             {
-              url: post.coverImage,
+              url: absoluteImageUrl,
+              secureUrl: absoluteImageUrl,
               width: 1200,
               height: 630,
               alt: post.heading,
+              type: absoluteImageUrl.toLowerCase().includes(".png")
+                ? "image/png"
+                : "image/jpeg",
             },
           ]
         : undefined,
@@ -54,7 +67,7 @@ export async function generateMetadata({ params }: Props) {
       card: "summary_large_image",
       title: post.heading,
       description: excerpt,
-      images: post.coverImage ? [post.coverImage] : undefined,
+      images: absoluteImageUrl ? [absoluteImageUrl] : undefined,
     },
   };
 }

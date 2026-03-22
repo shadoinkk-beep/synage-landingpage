@@ -67,7 +67,7 @@ export default function BlogsHero() {
             img: data.coverImage,
             description:
               data.content?.replace(/<[^>]+>/g, "").slice(0, 120) + "...",
-            url: `/blogs/${doc.id}`,
+            url: `/blogs/${data.heading}`,
           };
         });
 

@@ -129,7 +129,27 @@ const formattedDate = post.createdAt?.seconds
       )}
 
       <div
-        className="prose  leading-relaxed [&_p]:my-2 [&_h1]:my-3 [&_h2]:my-2 [&_ul]:my-2"
+        className="w-full max-w-none mt-10 text-[15px] sm:text-base text-white/80 font-body leading-relaxed
+          [&_h1]:text-3xl [&_h1]:md:text-4xl [&_h1]:font-heading [&_h1]:font-medium [&_h1]:text-white [&_h1]:mt-8 [&_h1]:mb-4 
+          [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-heading [&_h2]:font-medium [&_h2]:text-white [&_h2]:mt-8 [&_h2]:mb-4 
+          [&_h3]:text-xl [&_h3]:md:text-2xl [&_h3]:font-heading [&_h3]:font-medium [&_h3]:text-white [&_h3]:mt-6 [&_h3]:mb-3 
+          [&_p]:mb-4 
+          [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:mb-6 [&_ul]:marker:text-white/40
+          [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:mb-6 [&_ol]:marker:text-white/40
+          [&_li]:mb-2 [&_li]:pl-1
+          [&_a]:text-blue-400 [&_a]:underline [&_a:hover]:text-blue-300
+          [&_blockquote]:border-l-4 [&_blockquote]:border-[#B8D779] [&_blockquote]:pl-5 [&_blockquote]:py-2 [&_blockquote]:italic [&_blockquote]:my-6 [&_blockquote]:bg-white/5 [&_blockquote]:rounded-r-lg
+          [&_img]:w-full [&_img]:rounded-2xl [&_img]:my-8 [&_img]:shadow-md [&_img]:object-cover
+          [&_strong]:font-bold [&_strong]:text-white
+          [&_em]:italic
+          [&_code]:bg-white/10 [&_code]:px-1.5 [&_code]:py-0.5 [&_code]:rounded-md [&_code]:text-sm [&_code]:font-mono
+          [&_pre]:bg-[#0b0b0b] [&_pre]:text-white [&_pre]:p-5 [&_pre]:rounded-xl [&_pre]:overflow-x-auto [&_pre]:my-6 [&_pre]:text-sm
+          [&_.ql-align-center]:text-center
+          [&_.ql-align-right]:text-right
+          [&_.ql-align-justify]:text-justify
+          [&_.ql-size-small]:text-sm
+          [&_.ql-size-large]:text-lg
+          [&_.ql-size-huge]:text-2xl"
         dangerouslySetInnerHTML={{ __html: serverRenderedPost.content }}
       />
 

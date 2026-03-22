@@ -22,15 +22,33 @@ export async function generateMetadata({ params }: Props) {
     return { title: "Post Not Found", description: "The requested blog post does not exist." };
   }
 
-  const excerpt = post.content.replace(/<[^>]+>/g, "").slice(0, 160);
+  const excerpt = post.content
+    .replace(/<[^>]+>/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 160) + "...";
 
   return {
     title: post.heading,
     description: excerpt,
+    alternates: {
+      canonical: `/blogs/${titleParam}`,
+    },
     openGraph: {
       title: post.heading,
       description: excerpt,
-      images: post.coverImage ? [{ url: post.coverImage }] : undefined,
+      url: `/blogs/${titleParam}`,
+      type: "article",
+      images: post.coverImage
+        ? [
+            {
+              url: post.coverImage,
+              width: 1200,
+              height: 630,
+              alt: post.heading,
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: "summary_large_image",

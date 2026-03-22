@@ -217,14 +217,14 @@ function BlogCard({ blog }: { blog: any }) {
       className="relative rounded-3xl overflow-hidden bg-black h-105 flex flex-col justify-end"
     >
       <Image src={blog.img} alt={blog.title} fill className="object-cover" />
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(0,0,0,0.1)_20%,rgba(0,0,0,0.8)_100%)]" />
 
-      <div className="relative z-10 p-6 text-white space-y-4">
-        <h3 className="font-body text-lg font-semibold">
+      <div className="relative z-10 p-6 text-white">
+        <h3 className="font-body text-2xl font-semibold">
           {blog.title}
         </h3>
 
-        <p className="text-sm opacity-80 line-clamp-3">
+        <p className="text-lg  line-clamp-3 pb-4">
           {blog.description}
         </p>
 
